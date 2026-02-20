@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="FORM_COMBATE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FORM_TIENDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MENU_PRINCIPAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PANTALLA_CARGAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PANTALLA_JUEGO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RESUMEN_PERSONAJE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SELECCION_ALINEMIENTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SELECCION_CLASE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SELECCION_RAZA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SELECCION_SUBRAZA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SELECCION_TRASFONDO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

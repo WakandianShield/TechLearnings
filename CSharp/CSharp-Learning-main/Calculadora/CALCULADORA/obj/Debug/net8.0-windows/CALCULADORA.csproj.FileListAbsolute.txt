@@ -1,0 +1,16 @@
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.csproj.GenerateResource.cache
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\bin\Debug\net8.0-windows\CALCULADORA.exe
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\bin\Debug\net8.0-windows\CALCULADORA.deps.json
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\bin\Debug\net8.0-windows\CALCULADORA.runtimeconfig.json
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\bin\Debug\net8.0-windows\CALCULADORA.dll
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\bin\Debug\net8.0-windows\CALCULADORA.pdb
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.dll
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\refint\CALCULADORA.dll
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.pdb
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.genruntimeconfig.cache
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\ref\CALCULADORA.dll
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA\CALCULADORA\obj\Debug\net8.0-windows\CALCULADORA.CALCULADORA.resources

@@ -1,0 +1,16 @@
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\CALCULADORA CIENTIFICA.csproj.GenerateResource.cache
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\CALCULADORA CIENTIFICA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\CALCULADORA CIENTIFICA.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\CALCULADORA CIENTIFICA.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\CALCULADORA CIENTIFICA.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\bin\Debug\net8.0-windows\CALCULADORA CIENTIFICA.exe
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\bin\Debug\net8.0-windows\CALCULADORA CIENTIFICA.deps.json
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\bin\Debug\net8.0-windows\CALCULADORA CIENTIFICA.runtimeconfig.json
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\bin\Debug\net8.0-windows\CALCULADORA CIENTIFICA.dll
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\bin\Debug\net8.0-windows\CALCULADORA CIENTIFICA.pdb
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\CALCULADORA CIENTIFICA.dll
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\refint\CALCULADORA CIENTIFICA.dll
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\CALCULADORA CIENTIFICA.pdb
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\CALCULADORA CIENTIFICA.genruntimeconfig.cache
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\ref\CALCULADORA CIENTIFICA.dll
+C:\Users\santi\OneDrive\Documentos\C#\CALCULADORA CIENTIFICA\CALCULADORA CIENTIFICA\obj\Debug\net8.0-windows\Calculator.MainView.resources

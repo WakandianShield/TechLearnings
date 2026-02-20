@@ -1,0 +1,15 @@
+{
+  "Raza": "HUMANO",
+  "Subraza": "NINGUNA",
+  "Clase": "GUERRERO",
+  "Trasfondo": "SOLDADO",
+  "Alineamiento": "LEGAL BUENO",
+  "Stats": {
+    "Fuerza": 0,
+    "Destreza": 0,
+    "Constitucion": 0,
+    "Inteligencia": 0,
+    "Sabiduria": 0,
+    "Carisma": 0
+  }
+}
