@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: aliceblue;
+    background: linear-gradient(90deg in oklab, rgb(225, 0, 255), rgb(255, 93, 120));      
+}
+
+/*HEADER*/
+.header {
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: url("https://www.laxmasmusica.com/uploads/newsarticle/d19ca9ee8cc14aedbad34202e5cc6a93/tameweb-min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 45px;
+    text-wrap: balance;
+}
+
+.header-overlay {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0008;
+    position: absolute;
+    z-index: 1;
+}
+
+.header-item-container {
+    position: relative;
+    z-index: 10;
+    margin: auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+.header-item-container p {
+    text-wrap: pretty;
+}
+
+.title.image {
+    width: 100px;
+    height: 100px;
+}
+
+/*NAV*/
+
+.nav {
+    background: rgb(26,217,170);
+    background: linear-gradient(90deg, rgba(26,217,170,1) 0%, rgba(29,154,253,1) 21%, rgba(212,80,244,1) 59%, rgba(252,69,69,1) 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 20px black;
+}
+
+.nav-ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 0;
+    transition: background-color 0.2s, border-radius 0.2s, outline 0.2s, outline-offset 0.2s;
+    margin: 2px ;
+    outline: 0;
+    outline-offset: 0;
+}
+
+.nav-link:hover {
+    border-radius: 20px;
+    background-color: rgba(255, 252, 254, 0.212);
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+.link-login {
+    background:rgb(155, 206, 253);      
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 8px 15px;
+}
+
+
+
+.nav-logo {
+    width: 100px;
+}
+
+.nav-flex-item {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-text {
+    margin: 0;
+    text-align: justify;
+    padding: 15px;
+
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    font-size: 20px;
+}

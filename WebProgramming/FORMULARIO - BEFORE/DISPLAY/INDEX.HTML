@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="stylesheet" href="STYLES.CSS">
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li class="nav-item">
+                <a href="" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Help</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link">Contact</a> 
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link nav-button">Log In</a>
+            </li>
+        </ul>
+    </nav>
+
+    <form>
+        <h2> Formulario de Contacto</h2>
+        <!--INPUT SIMPLE-->
+        <fieldset>
+            <legend>Información Basica</legend>
+            <div class="form_input">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" placeholder="" id="nombre">
+            </div>
+            <div class="form_input">
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@domain.com" id="email">
+            </div>
+            <div class="form_input">
+                <label for="asunto">Asunto</label>
+                <input type="text" placeholder="El asunto de tu mensaje." id="asunto">
+            </div>
+        </fieldset>
+
+        <!--SELECT Y OPTION-->
+        
+            
+            <div class="form_input">
+                <label> Tipo de usuario
+                    <select aria-label="Seleccionar tipo de usuario">
+                        <option value="option1">SEGUIDOR</option>
+                        <option value="option2">EMPRESA</option>
+                        <option value="option3">OTROS</option>
+                    </select>
+                </label>
+            </div>
+        
+            <div class="form_input">
+                <label> Referente
+                    <input list="referente" name="Escribe tu referente">
+                    <datalist id="referente">
+                        <option value="REDES SOCIALES">Instagram, TikTok, etc.</option>
+                        <option value="PUBLICIDAD FISICA">Carteles, espectaculos, etc.</option>
+                        <option value="AMIGOS">Conocidos, amigos, etc.</option>
+                    </datalist>
+                </label>
+            </div>
+        
+
+        <!--TEXT AREA-->
+        <div class="form_input">
+            <label for="mensaje">Mensaje</label>
+            <textarea rows="8" placeholder="Deja tu mensaje..." id="mensaje"></textarea>
+        </div>
+        <div class="form_input">
+            <label> Acepto los <a target="_blank" href="TYC.HTML">terminos y condiciones</a>
+                <input type="checkbox" class="checkbox">
+            </label>
+        </div>
+    </form>
+
+</body>
+</html> 
+
