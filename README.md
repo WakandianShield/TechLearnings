@@ -47,10 +47,7 @@ TechLearnings/
 
 <h2 align="center">Download</h2>
 
-- Clone the repository:
-
-`git clone https://github.com/TuUsuario/TechLearnings.git`
-
+- Clone the repository: `git clone https://github.com/TuUsuario/TechLearnings.git`
 - Explore the folder of the technology you want to practice.
 - Open the projects with your favorite IDE or code editor.
 - Try, modify, and experiment to learn better.
