@@ -56,6 +56,8 @@ TechLearnings/
 
 <p align="center">
 If you want to give me feedback or share ideas, you can contact me through my GitHub profile or social media.
-
+<br><br>
 This repository is a technological learning journal; each commit represents another step in my journey as a developer.
+<br><br>
+<b>Note:</b> Some files contain explanatory information in Spanish.
 </p>
