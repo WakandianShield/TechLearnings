@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Form - RainyWaves Web Agency</title>
+  <meta name="description" content="Contact RainyWaves for custom web design. Send your project details and get started today!" />
+  <meta name="keywords" content="web design, contact form, custom websites, responsive design, SEO services" />
+  <meta name="author" content="RainyWaves" />
+  <meta name="robots" content="index, follow" />
+  <link href="form.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="header" role="banner">
+  <div class="container header-container">
+    <a href="index.html" class="logo" aria-label="RainyWaves homepage">RNY</a>
+    <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden />
+    <label class="burger" for="burger-toggle" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="nav" role="navigation" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#plans">Plans</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#footer">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="index.html#purchase" class="btn btn-primary" role="button">Buy Now</a>
+  </div>
+</header>
+
+<!-- Animated canvas background -->
+<canvas id="background-canvas"></canvas>
+
+<!-- Ambient music -->
+<audio id="ambient-audio" src="ambient.mp3" loop preload="auto" aria-label="Ambient background music"></audio>
+<button id="start-sound-btn" style="
+  position: fixed;
+  top: 18px;
+  right: 10px;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  ">
+  Start Ambient Sound
+</button>
+
+<main class="form-main" role="main">
+  <form id="contact-form" action="https://formspree.io/f/xzbqgwra" method="POST" aria-label="Contact form">
+    <h1>Contact Us</h1>
+    
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="FirstName" required aria-required="true" />
+    
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="LastName" required aria-required="true" />
+    
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="Email" required aria-required="true" />
+    
+    <label for="colors">Colors & Details</label>
+    <input type="text" id="colors" name="ColorsDetails" placeholder="e.g., Blue, pastel tones..." />
+    
+    <label for="specs">Specifications</label>
+    <textarea id="specs" name="Specifications" rows="4" placeholder="Tell us more about your project..."></textarea>
+    
+    <button type="submit" aria-label="Send contact form">Send</button>
+  </form>
+</main>
+
+<script src="form.js"></script>
+
+</body>
+</html>

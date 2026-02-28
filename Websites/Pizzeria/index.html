@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería Deliziosa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegación minimalista -->
+    <nav class="navbar">
+        <div class="nav-logo">Deliziosa</div>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger"><span></span><span></span><span></span></label>
+        <ul class="nav-links">
+            <li><a href="#section1">Inicio</a></li>
+            <li><a href="#section2">Nosotros</a></li>
+            <li><a href="#section3">Menú</a></li>
+            <li><a href="#section4">Ingredientes</a></li>
+            <li><a href="#section5">Galería</a></li>
+            <li><a href="#section6">Opiniones</a></li>
+            <li><a href="#section7">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <svg viewBox="0 0 122 122" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <g class="whole" id="pizza">
+                    <circle cx="61" cy="61" r="61" fill="#FFB800"/>
+                    <circle cx="61" cy="61" r="55" fill="#FFDE31"/>
+                    <g fill="#CD2D36" stroke="#FEA202" stroke-miterlimit="10" stroke-width="2">
+                        <circle cx="61" cy="29.11" r="8" />
+                        <circle cx="38.45" cy="38.45" r="8" />
+                        <circle cx="29.11" cy="61" r="8" />
+                        <circle cx="38.45" cy="83.55" r="8" />
+                        <circle cx="61" cy="92.89" r="8" />
+                        <circle cx="83.55" cy="83.55" r="8" />
+                        <circle cx="92.89" cy="61" r="8" />
+                        <circle cx="83.55" cy="38.45" r="8" />
+                    </g>
+                    <circle cx="61" cy="61" r="48.2" fill="none" stroke="#FEA202" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="16 10 8 4"/>
+                    <circle cx="61" cy="60.8" r="8" fill="#CD2D36" stroke="#FEA202" stroke-miterlimit="10" stroke-width="2"/>
+                </g>
+                <path id="sliceOutline" d="M62.94,61.63,82.68,9a2.51,2.51,0,0,0-1.41-3C72,.8,50,.8,40.63,5.9a2.46,2.46,0,0,0-1.34,3L59.06,61.63A2.07,2.07,0,0,0,62.94,61.63Z" />
+                <mask id="pizzaMask">
+                    <use class="pizzaMask" xlink:href="#sliceOutline" x="0%" y="0%" fill="#FFF" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </mask>
+            </defs>
+            <g mask="url(#pizzaMask)">
+                <use xlink:href="#pizza" x="0%" y="0%"/>
+            </g>
+            <use class="pizzaOutline" xlink:href="#sliceOutline" x="0%" y="0%" fill="none" stroke="#FEA202" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+    </div>
+
+    <div class="animated-background"></div>
+    <div id="pizza-tracker">
+        <img src="https://static.vecteezy.com/system/resources/previews/016/765/681/non_2x/pizza-fast-food-cartoon-png.png" alt="Pizza" />
+    </div>
+
+    <main>
+        <section id="section1" class="section hero">
+            <h1>Pizzería Deliziosa</h1>
+            <p class="subtitle">Sabor auténtico, estilo minimalista.</p>
+        </section>
+        <div class="pizza-divider"></div>
+        <section id="section2" class="section parallax">
+            <h2>Sobre Nosotros</h2>
+            <p>Tradición y modernidad en cada porción.</p>
+        </section>
+        <section id="section3" class="section horizontal-scroll">
+            <h2>Menú</h2>
+            <div class="menu-scroll" tabindex="-1">
+                <div class="menu-item"><span>Margherita</span><span>$120</span></div>
+                <div class="menu-item"><span>Pepperoni</span><span>$140</span></div>
+                <div class="menu-item"><span>Cuatro Quesos</span><span>$150</span></div>
+                <div class="menu-item"><span>Vegetariana</span><span>$135</span></div>
+                <div class="menu-item"><span>Hawaiana</span><span>$145</span></div>
+                <div class="menu-item"><span>Mexicana</span><span>$155</span></div>
+                <div class="menu-item"><span>Prosciutto</span><span>$160</span></div>
+                <div class="menu-item"><span>Fugazzeta</span><span>$150</span></div>
+                <div class="menu-item"><span>Calabresa</span><span>$145</span></div>
+                <div class="menu-item"><span>Capresse</span><span>$140</span></div>
+                <div class="menu-item"><span>Especial Deliziosa</span><span>$170</span></div>
+            </div>
+        </section>
+        <section id="section4" class="section parallax">
+            <h2>Ingredientes</h2>
+            <p>Solo ingredientes frescos y seleccionados.</p>
+        </section>
+        <section id="section5" class="section parallax">
+            <h2>Galería</h2>
+            <div class="gallery">
+                <img src="gallery1.jpg" alt="Pizza 1">
+                <img src="gallery2.jpg" alt="Pizza 2">
+                <img src="gallery3.jpg" alt="Pizza 3">
+                <img src="gallery4.jpg" alt="Pizza 4">
+            </div>
+        </section>
+        <section id="section6" class="section parallax">
+            <h2>Opiniones</h2>
+            <div class="reviews">
+                <blockquote>“La mejor pizza, sin complicaciones.”</blockquote>
+                <blockquote>“Ambiente moderno y relajado.”</blockquote>
+                <blockquote>“Simplemente deliciosa.”</blockquote>
+            </div>
+        </section>
+        <section id="section7" class="section contact">
+            <h2>Contacto</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

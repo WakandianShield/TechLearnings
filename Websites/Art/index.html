@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artiscope | Art Studio & Gallery</title>
+  <meta name="description" content="Artiscope is a modern art studio and gallery. Discover artworks, custom commissions, and creative workshops." />
+  <meta name="keywords" content="art, gallery, painting, artist, exhibitions, workshops, commissions, drawing, sculpture" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Artiscope" />
+  <meta property="og:title" content="Artiscope | Art Studio & Gallery" />
+  <meta property="og:description" content="Explore the world of modern art with Artiscope. Visit our gallery and discover unique creations." />
+  <meta property="og:image" content="https://www.artiscope.com/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.artiscope.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Artiscope | Art Studio & Gallery" />
+  <meta name="twitter:description" content="Modern art, workshops, and custom creations." />
+  <meta name="twitter:image" content="https://www.artiscope.com/assets/twitter-image.jpg" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">Artiscope</a>
+      <nav class="nav" id="nav-menu" aria-label="Main menu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#collab" class="nav-link">Collaborations</a></li>
+          <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div id="particles-js"></div> <!-- animated background -->
+    <div class="container hero-content">
+      <h1>Unleash Your Creative Spirit with Artiscope</h1>
+      <p>Where colors meet emotions, and imagination becomes reality.</p>
+      <a href="#gallery" class="btn-primary">Explore Gallery</a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section fade-in-up">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p>At Artiscope, we believe in the transformative power of art. Our studio is home to a diverse range of artists, all united by a passion to express and inspire.</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery-section fade-in-up">
+    <div class="container">
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid">
+        <div class="art-card"><img src="foto1.png" alt="Art 1" /></div>
+        <div class="art-card"><img src="foto2.png" alt="Art 2" /></div>
+        <div class="art-card"><img src="foto3.png" alt="Art 3" /></div>
+        <div class="art-card"><img src="foto4.png" alt="Art 4" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services-section fade-in-left">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>Custom Art</h3>
+          <p>Order tailor-made pieces from our in-house artists.</p>
+        </div>
+        <div class="service-item">
+          <h3>Creative Workshops</h3>
+          <p>Join group sessions and build your artistic skills.</p>
+        </div>
+        <div class="service-item">
+          <h3>Exhibitions</h3>
+          <p>Experience monthly curated exhibitions featuring emerging talent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="process-section fade-in-right">
+    <div class="container">
+      <h2 class="section-title">Our Process</h2>
+      <ol class="process-list">
+        <li><strong>1. Consultation:</strong> We discuss your ideas and goals.</li>
+        <li><strong>2. Creation:</strong> Our artists start working on your piece.</li>
+        <li><strong>3. Review:</strong> You review and suggest changes.</li>
+        <li><strong>4. Delivery:</strong> We finalize and ship your art.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section id="testimonials" class="testimonials-section fade-in-up">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-item active">
+          <p>"Artiscope captured exactly what I had envisioned. Absolutely stunning work!"</p>
+          <h4>- Maria R.</h4>
+        </div>
+        <div class="testimonial-item">
+          <p>"Their team made me feel like part of the process. The result was amazing."</p>
+          <h4>- Jason L.</h4>
+        </div>
+        <div class="testimonial-item">
+          <p>"The gallery space is beautiful and the workshops are super inspiring."</p>
+          <h4>- Dana S.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section fade-in-up">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <form action="#" method="POST" class="contact-form" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="collab" class="map-section fade-in-up">
+  <div class="container">
+    <h2 class="section-title">Visit Our Studio</h2>
+  </div>
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+</section>
+
+<!-- Google Maps API Script (Replace YOUR_API_KEY with real key) -->
+
+  <div id="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.130494503024!2d-121.5038179846803!3d38.581571779603594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac4e1c5f72049%3A0x51f4d647b7f1a5ee!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2smx!4v1688274251927!5m2!1sen!2smx" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Artiscope. All rights reserved. | Designed with passion 🎨</p>
+    </div>
+  </footer>
+
+  <!-- Animated Background Particles -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.2 },
+        size: { value: 3 },
+        move: { enable: true, speed: 1, out_mode: "out" },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: false }, onclick: { enable: false } },
+      },
+      retina_detect: true,
+    });
+  </script>
+</body>
+</html>

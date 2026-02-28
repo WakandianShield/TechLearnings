@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description"
+    content="Experience fine dining at GastronoMe. Explore our gourmet menu, make a reservation, and discover our story." />
+  <meta name="keywords" content="restaurant, fine dining, food, reservations, gourmet, local cuisine, gastronomy" />
+  <meta property="og:title" content="GastronoMe | Fine Dining Experience" />
+  <meta property="og:description"
+    content="Discover the perfect balance of flavor and ambiance at GastronoMe. Make your reservation today." />
+  <meta property="og:image" content="https://source.unsplash.com/featured/?restaurant,food" />
+  <meta property="og:type" content="website" />
+  <meta name="author" content="Your Name or Agency" />
+  <title>GastronoMe | Fine Dining</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="logo" tabindex="0">GastronoMe</div>
+      <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav-links" role="menu" aria-hidden="true">
+        <li role="none"><a role="menuitem" href="#hero" tabindex="-1">Home</a></li>
+        <li role="none"><a role="menuitem" href="#menu" tabindex="-1">Menu</a></li>
+        <li role="none"><a role="menuitem" href="#reservation" tabindex="-1">Reservations</a></li>
+        <li role="none"><a role="menuitem" href="#about" tabindex="-1">About</a></li>
+        <li role="none"><a role="menuitem" href="#contact" tabindex="-1">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero" aria-label="Hero section">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+      <h1 class="hero-title">American Restaurant</h1>
+      <p class="hero-subtitle">Where flavor meets elegance</p>
+      <a href="#menu" class="cta-btn" aria-label="Explore menu">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu" aria-labelledby="menu-title">
+    <h2 id="menu-title" data-aos="fade-right" data-aos-duration="1000">Our Signature Dishes</h2>
+    <div class="menu-grid">
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="50" data-aos-duration="800" tabindex="0">
+        <img src="https://www.nefb.org/wp-content/uploads/2023/06/2023_Grilling-Season-800x400.jpg" alt="Grilled Steak" loading="lazy" />
+        <h3>Grilled Steak</h3>
+        <p>Juicy grilled steak with rosemary butter and garlic potatoes.</p>
+        <span class="price">$32</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1159343285/photo/grilled-salmon-steaks-in-frying-pan-with-garlic-and-rosemary.jpg?s=612x612&w=0&k=20&c=qK9AqncmW5V8Ds-KxxRrJjY7gTyxj8bQ73OfHmnDcQg=" alt="Pan Seared Salmon" loading="lazy" />
+        <h3>Pan Seared Salmon</h3>
+        <p>Fresh salmon fillet with lemon dill sauce and seasonal veggies.</p>
+        <span class="price">$28</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="150" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1352226585/photo/tagliatelle-pasta-with-black-truffle-mushrooms-tagliatelle-al-tartufo-italian-autumn-fresh.jpg?s=612x612&w=0&k=20&c=6pjughyMkmP3Kr74bCt5OHGmVZeCftSgrNAu422bqZc=" alt="Truffle Pasta" loading="lazy" />
+        <h3>Truffle Pasta</h3>
+        <p>Homemade pasta tossed with black truffle oil and parmesan.</p>
+        <span class="price">$24</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1135083542/photo/spicy-garlic-chili-prawns-shrimps.jpg?s=612x612&w=0&k=20&c=47i9bf2TcL-D_7yGezxBWQtwfaooVBbF3G2wIVL9dAc=" alt="Garlic Butter Shrimp" loading="lazy" />
+        <h3>Garlic Butter Shrimp</h3>
+        <p>Sautéed shrimp in garlic butter with fresh herbs and rice.</p>
+        <span class="price">$26</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="250" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/478249440/photo/tabbouleh-salad-with-quinoa-parsley-and-vegetables.jpg?s=612x612&w=0&k=20&c=zktRYgRomMrXb3dDdx-4-UFFG2gK-d-N6kmMaQCJjqQ=" alt="Quinoa Salad" loading="lazy" />
+        <h3>Quinoa Salad</h3>
+        <p>Fresh quinoa with cherry tomatoes, cucumbers, and feta cheese.</p>
+        <span class="price">$18</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/617759204/photo/steakhouse-double-bacon-cheeseburger.jpg?s=612x612&w=0&k=20&c=QRaHtrxJsmNKOlOTkvxyE-o-3kM-Me1zU320yPT8ycI=" alt="Gourmet Burger" loading="lazy" />
+        <h3>Gourmet Burger</h3>
+        <p>Beef patty with cheddar, lettuce, tomato, and house sauce.</p>
+        <span class="price">$20</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="350" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1414575281/photo/a-delicious-and-tasty-italian-pizza-margherita-with-tomatoes-and-buffalo-mozzarella.jpg?s=612x612&w=0&k=20&c=v8mdiAa_5NaRYtIscClXe85lLzkx7loSd9_pJWt9G2o=" alt="Margherita Pizza" loading="lazy" />
+        <h3>Margherita Pizza</h3>
+        <p>Classic pizza with fresh mozzarella, basil, and tomato sauce.</p>
+        <span class="price">$22</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/519647167/photo/homemade-autumn-butternut-squash-soup.jpg?s=612x612&w=0&k=20&c=aPqaeMBqPbJNMhv4uU23cST00TFEtgI87xB6kZ1VPf0=" alt="Butternut Squash Soup" loading="lazy" />
+        <h3>Butternut Squash Soup</h3>
+        <p>Creamy squash soup with a hint of cinnamon and toasted seeds.</p>
+        <span class="price">$14</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="450" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/527169831/photo/christmas-goose.jpg?s=612x612&w=0&k=20&c=Pafjnd2Y6jpl8w-K13pgqfS99HcAypvZrLlNUZCsWx8=" alt="Roasted Duck" loading="lazy" />
+        <h3>Roasted Duck</h3>
+        <p>Slow roasted duck with orange glaze and wild rice.</p>
+        <span class="price">$34</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1369183332/photo/risotto-with-brown-champignon-mushrooms.jpg?s=612x612&w=0&k=20&c=hXubXk9pxjZbSR436lNbNWMrbGd37Y3v3DaopBoU84M=" alt="Mushroom Risotto" loading="lazy" />
+        <h3>Mushroom Risotto</h3>
+        <p>Creamy arborio rice with wild mushrooms and parmesan.</p>
+        <span class="price">$25</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="550" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/544716244/photo/warm-chocolate-lava-cake-with-molten-center-and-red-currants.jpg?s=612x612&w=0&k=20&c=i1rRa1x7D1pu-INKabmC21BaU9MC8ZRQdcC7dBLdzUo=" alt="Chocolate Lava Cake" loading="lazy" />
+        <h3>Chocolate Lava Cake</h3>
+        <p>Warm cake with a molten chocolate center served with vanilla ice cream.</p>
+        <span class="price">$12</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1225491381/photo/cheesecake-with-caramel-sauce.jpg?s=612x612&w=0&k=20&c=RhQ8vfvs_W2jJw7EBahIF-UImeBABrVNflM3whnUm_M=" alt="Classic Cheesecake" loading="lazy" />
+        <h3>Classic Cheesecake</h3>
+        <p>Rich and creamy cheesecake with a graham cracker crust.</p>
+        <span class="price">$11</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="650" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1471256139/photo/close-up-of-goblet-with-signature-cocktail-which-hand-of-bartender-decorate-with-mint-leaf.jpg?s=612x612&w=0&k=20&c=4Gh8o10w3RtxeoWWp0j1FIDXShCXmkDjOQcbMQYbW9Y=" alt="Signature Cocktail" loading="lazy" />
+        <h3>Signature Cocktail</h3>
+        <p>Our mixologist’s special blend, fresh and invigorating.</p>
+        <span class="price">$14</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1030882758/photo/espresso-coffee-and-machine.jpg?s=612x612&w=0&k=20&c=k6ODdihU-Q7zG3ftft-pVYIkBf_V5I8V98UQDG3ChzE=" alt="Espresso" loading="lazy" />
+        <h3>Espresso</h3>
+        <p>Strong, aromatic espresso brewed to perfection.</p>
+        <span class="price">$5</span>
+      </article>
+      <article class="menu-item" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800" tabindex="0">
+        <img src="https://media.istockphoto.com/id/1326143969/photo/bowl-with-vanilla-ice-cream-balls.jpg?s=612x612&w=0&k=20&c=WxEriNEK7yW7F4AWImLQRrpco-R_bdDYEQoyhigu9fc=" alt="Vanilla Ice Cream" loading="lazy" />
+        <h3>Vanilla Ice Cream</h3>
+        <p>Creamy vanilla ice cream made with real vanilla beans.</p>
+        <span class="price">$8</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- RESERVATION SECTION -->
+  <section id="reservation" class="reservation" aria-labelledby="reservation-title" data-aos="fade-left" data-aos-duration="1000">
+    <h2 id="reservation-title">Book a Table</h2>
+    <p>Reserve your seat and enjoy a premium dining experience.</p>
+    <form class="reservation-form" method="POST" action="#" aria-label="Reservation form">
+      <input type="text" name="name" placeholder="Full Name" required aria-required="true" />
+      <input type="email" name="email" placeholder="Email Address" required aria-required="true" />
+      <input type="date" name="date" required aria-required="true" />
+      <input type="time" name="time" required aria-required="true" />
+      <input type="number" name="people" placeholder="Number of People" required aria-required="true" min="1" />
+      <textarea name="message" placeholder="Message (optional)" rows="4"></textarea>
+      <button type="submit">Submit Reservation</button>
+    </form>
+  </section>
+
+  <!-- ABOUT US SECTION -->
+  <section id="about" class="about" aria-labelledby="about-title" data-aos="fade-up" data-aos-duration="1000">
+    <h2 id="about-title">Our Story</h2>
+    <p>
+      At GastronoMe, we blend tradition with innovation, offering a culinary journey like no other.
+      From our locally sourced ingredients to our passion-driven team, every dish is a masterpiece.
+    </p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact" aria-labelledby="contact-title" data-aos="fade-up" data-aos-duration="1000">
+    <h2 id="contact-title">Get In Touch</h2>
+    <p>Email: <a href="mailto:contact@gastronome.com">contact@gastronome.com</a></p>
+    <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+    <p>Address: 123 Culinary Lane, Food City</p>
+    <div class="map-container" aria-label="Google Map location">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.130494503024!2d-121.5038179846803!3d38.581571779603594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80857fbc27f18e69%3A0x28e47b713e53f1d2!2sCulinary%20Institute!5e0!3m2!1sen!2sus!4v1628164202348!5m2!1sen!2sus"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Maps Location"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <p>© 2025 GastronoMe. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#hero">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservation">Reservations</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="social-icons" role="list" aria-label="Social media links">
+        <a href="#" role="listitem" aria-label="Facebook" target="_blank" rel="noopener"><svg width="24" height="24"
+            fill="currentColor" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+            <path
+              d="M22.675 0h-21.35C.595 0 0 .594 0 1.326v21.348C0 23.406.594 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.243l-1.918.001c-1.504 0-1.795.716-1.795 1.763v2.312h3.588l-.467 3.622h-3.121V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .594 23.406 0 22.675 0z" />
+          </svg></a>
+        <a href="#" role="listitem" aria-label="Instagram" target="_blank" rel="noopener"><svg width="24" height="24"
+            fill="currentColor" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+            <path
+              d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5a4.25 4.25 0 00-4.25-4.25h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z" />
+          </svg></a>
+        <a href="#" role="listitem" aria-label="Twitter" target="_blank" rel="noopener"><svg width="24" height="24"
+            fill="currentColor" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14.86 4.48 4.48 0 001.98-2.48 9.14 9.14 0 01-2.9 1.1 4.52 4.52 0 00-7.69 4.13 12.84 12.84 0 01-9.32-4.73 4.49 4.49 0 001.4 6.05A4.52 4.52 0 012 9.1v.05a4.52 4.52 0 003.6 4.43 4.52 4.52 0 01-2.04.08 4.52 4.52 0 004.21 3.14 9.06 9.06 0 01-5.62 1.94A9.24 9.24 0 012 19.45 12.79 12.79 0 008.29 21c7.54 0 11.67-6.25 11.67-11.67 0-.18 0-.36-.01-.54A8.18 8.18 0 0023 3z" />
+          </svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+</body>
+
+</html>

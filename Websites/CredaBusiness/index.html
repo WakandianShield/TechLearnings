@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creda — Purpose-Driven Website Design</title>
+  <meta name="description" content="Rainyaves creates fast, responsive, and purpose-driven websites that turn visitors into customers and reflect your brand essence." />
+  <meta name="keywords" content="website design, web development, responsive website, SEO, business website, Creda, digital agency, branding, ecommerce" />
+  <meta name="author" content="RNY" />
+  <link rel="canonical" href="https://rainywaves.com/" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph & Twitter Card -->
+  <meta property="og:title" content="RainyWaves — Purpose-Driven Website Design" />
+  <meta property="og:description" content="Websites that convert visitors into customers." />
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/256/11708/11708825.png" />
+  <meta property="og:url" content="https://rainywaves.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Creda — Purpose-Driven Website Design" />
+  <meta name="twitter:description" content="Websites that convert visitors into customers." />
+  <meta name="twitter:image" content="https://rainywaves.com/og-image.jpg" />
+  <!-- Schema.org markup for Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Creda",
+    "url": "https://rainywaves.com",
+    "logo": "https://rainywaves.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/rainywaves",
+      "https://twitter.com/rainywaves",
+      "https://www.linkedin.com/company/rainywaves"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader-container">
+    <div class="dot dot-1"></div>
+    <div class="dot dot-2"></div>
+    <div class="dot dot-3"></div>
+  </div>
+
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <defs>
+      <filter id="glow">  
+        <feGaussianBlur result="blur" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" mode="matrix" in="blur"></feColorMatrix>
+      </defs>
+    </filter>
+  </svg>
+</div>
+
+<!-- Navigation -->
+<header class="header">
+  <div class="container header-container">
+    <a href="#" class="logo">RNY</a>
+
+    <!-- Burger Toggle oculto -->
+    <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden />
+
+    <!-- Burger visible -->
+    <label class="burger" for="burger-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="form.html" class="btn btn-primary">Buy Now</a>
+  </div>
+</header>
+
+<!-- Main content -->
+<main>
+  <!-- 1. Banner (Hero) Section -->
+  <section class="hero fade-in" aria-label="Hero section">
+    <canvas id="hero-particles"></canvas>
+    <div class="container hero-container">
+      <h1>Your Business Deserves a Website with Purpose.</h1>
+      <p>At Rainywaves, we design websites that convey your vision, convert visitors into customers, and reflect your brand’s essence.</p>
+      <div class="hero-cta">
+        <a href="#plans" class="btn btn-primary" role="button">Get Started Now</a>
+        <a href="#portfolio" class="btn btn-secondary" role="button">See Examples</a>
+      </div>
+    </div>
+    <a href="#portfolio" class="scroll-down" aria-label="Scroll down">↓</a>
+  </section>
+
+  <!-- 2. Discover Creda Video -->
+  <section class="video fade-in" aria-labelledby="video-title">
+    <div class="container">
+      <h2 id="video-title">Discover RainyWaves in 90 Seconds</h2>
+      <video controls poster="images/video-poster.jpg" width="100%" autoplay muted>
+        <source  src="https://videocdn.cdnpk.net/videos/4f6d2cdd-fe06-523e-858d-adb9c87bbb6b/horizontal/previews/watermarked/large.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- 3. Our Impact (Stats) Section -->
+  <section class="stats fade-in" aria-labelledby="stats-title">
+    <div class="container">
+      <h2 id="stats-title">Our Impact in Numbers</h2>
+      <div class="stats-grid stagger">
+        <div class="stat-item">
+          <span class="stat-number" data-count="120">0</span>
+          <p>Websites Launched</p>
+          <div class="stat-bar"><div class="stat-fill" style="width:0%"></div></div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="98">0</span>
+          <p>Client Satisfaction (%)</p>
+          <div class="stat-bar"><div class="stat-fill" style="width:0%"></div></div>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="5">0</span>
+          <p>Average Days to Launch</p>
+          <div class="stat-bar"><div class="stat-fill" style="width:0%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Technology You Use Section -->
+  <section class="technology fade-in" aria-labelledby="technology-title">
+    <div class="container">
+      <h2 id="technology-title">Technologies We Use</h2>
+      <div class="tech-interactive stagger">
+        <div class="tech-card" data-tech="HTML5">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" />
+          <span>HTML5</span>
+          <div class="tech-desc">Modern markup for fast, accessible websites.</div>
+        </div>
+        <div class="tech-card" data-tech="CSS3">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3iHW9F8U24tel7OWvX4YKDzZH1n8Kt42Zsw&s" alt="CSS3" />
+          <span>CSS3</span>
+          <div class="tech-desc">Advanced styling, animations, and responsive design.</div>
+        </div>
+        <div class="tech-card" data-tech="JavaScript">
+          <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript" />
+          <span>JavaScript</span>
+          <div class="tech-desc">Interactivity, dynamic content, and seamless UX.</div>
+        </div>
+        <div class="tech-card" data-tech="React">
+          <img src="https://www.rapiddg.com/sites/default/files/imce-files/react.png" alt="React" />
+          <span>React</span>
+          <div class="tech-desc">Component-based UI for scalable projects.</div>
+        </div>
+        <div class="tech-card" data-tech="Node.js">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtb_9zVzsPWq_LDNDBVCsBYFo996KtVyCxWg&s" alt="Node.js" />
+          <span>Node.js</span>
+          <div class="tech-desc">Fast backend for APIs and integrations.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 7. Features Section -->
+  <section id="features" class="features fade-in" aria-labelledby="features-title">
+    <div class="container">
+      <h2 id="features-title">Features That Set Us Apart</h2>
+      <div class="features-grid stagger">
+        <div class="feature-item">
+          <img src="https://cdn.pixabay.com/animation/2023/08/10/06/24/06-24-17-858_512.gif" alt="Speed feature" />
+          <h3>Lightning Fast</h3>
+          <p>Optimized for instant loading and smooth navigation.</p>
+        </div>
+        <div class="feature-item">
+          <img src="https://cdn.pixabay.com/animation/2023/06/13/15/12/15-12-50-659_512.gif" alt="Security feature" />
+          <h3>Enterprise Security</h3>
+          <p>SSL, firewalls, and best practices for peace of mind.</p>
+        </div>
+        <div class="feature-item">
+          <img src="https://cdn.pixabay.com/animation/2023/03/19/15/09/15-09-56-389_512.gif" alt="Analytics feature" />
+          <h3>Advanced Analytics</h3>
+          <p>Track visitors, conversions, and engagement in real time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Portfolio Section -->
+  <section id="portfolio" class="portfolio fade-in" aria-labelledby="portfolio-title">
+    <div class="container">
+      <h2 id="portfolio-title">Portfolio</h2>
+      <div class="portfolio-slider">
+        <div class="portfolio-grid stagger">
+
+          <figure class="portfolio-item">
+            <a class="portfolio-img" href="https://wakandianshield.github.io/CarWash.github.io/">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTe_zmaFqr8b5YgkW95vuB0Ac7TMHb8-zBGw&s" alt="Restaurant website example" loading="lazy" />
+            </a>
+            <figcaption>Car Wash</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <a class="portfolio-img" href="https://wakandianshield.github.io/DentalCenter/">
+            <img src="https://laurelsmilesdentalcare.com/wp-content/uploads/2025/05/patients-review-laurel-smiles-scaled-682b0f56125be-1.webp" alt="Clinic website example" loading="lazy" />
+            </a>
+            <figcaption>Clinic Website</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <a class="portfolio-img" href="https://wakandianshield.github.io/NutritionalBusiness/">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fHww" alt="Personal trainer website example" loading="lazy" />
+            </a>
+            <figcaption>Personal Trainer Website</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <a  class="portfolio-img" href="https://wakandianshield.github.io/ArchitectureBuildings/">
+            <img src="https://www.hashmicro.com/blog/wp-content/uploads/2022/10/Tools-16.jpg" alt="Personal trainer website example" loading="lazy" />
+            </a>
+            <figcaption>Architecture Business Website</figcaption>
+          </figure>
+          
+          <figure class="portfolio-item">
+            <a class="portfolio-img" href="https://wakandianshield.github.io/Cafeteria/">
+            <img src="https://www.sillasmesas.es/blog/wp-content/uploads/2018/12/diferencia-licencia-pub-licencia-cafeteria-1.jpg" alt="Personal trainer website example" loading="lazy" />
+            </a>
+            <figcaption>Cafeteria</figcaption>
+          </figure>
+
+          <figure class="portfolio-item">
+            <a class="portfolio-img" href="https://wakandianshield.github.io/TattooStudio.github.io/">
+            <img src="https://images.squarespace-cdn.com/content/v1/5c66a6b77788975c32418dc6/1708730954144-XN1431UOM4FKERXOIW4X/shop+inside+%281%29.jpg" alt="Personal trainer website example" loading="lazy" />
+            </a>
+            <figcaption>Tattoo Studio</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Our Process Section -->
+  <section id="process" class="process fade-in" aria-labelledby="process-title">
+    <div class="container">
+      <h2 id="process-title">Our Process</h2>
+      <ol class="process-list stagger">
+        <li>Discovery & Strategy</li>
+        <li>Design & Prototyping</li>
+        <li>Development & Testing</li>
+        <li>Launch & Optimization</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 10. Price (Plans) Section -->
+  <section id="plans" class="plans fade-in" aria-labelledby="plans-title">
+    <div class="container">
+      <h2 id="plans-title">Plans for Every Stage of Your Business</h2>
+      <div class="plans-grid stagger">
+        
+        <a class="plan-item" href="form.html">
+        <article class="plan-item" href="form.html">
+          <h3>Essential</h3>
+          <p class="price">$600 USD</p>
+          <ul>
+            <li>5 sections</li>
+            <li>Customization</li>
+            <li>Responsive design</li>
+            <li>Google Maps integration</li>
+            <li>Contact & social media integration</li>
+          </ul>
+        </article></a>
+        
+        <a class="plan-item" href="form.html">
+        <article class="plan-item" href="form.html">
+          <h3>Professional</h3>
+          <p class="price">$1,200 USD</p>
+          <ul>
+            <li>7-9 sections</li>
+            <li>Advanced SEO</li>
+            <li>Customization</li>
+            <li>Responsive design</li>
+            <li>Visual animations</li>
+            <li>Google Maps integration</li>
+            <li>Contact & social media integration</li>
+          </ul>
+        </article></a>
+        
+        <a class="plan-item" href="form.html">
+        <article class="plan-item" href="form.html">
+          <h3>Premium</h3>
+          <p class="price">$2,000 USD</p>
+          <ul>
+            <li>Advanced SEO</li>
+            <li>Customization</li>
+            <li>10-12 sections</li>
+            <li>Online Purchases</li>
+            <li>Responsive design</li>
+            <li>Visual animations</li>
+            <li>Google Maps integration</li>
+            <li>Contact & social media integration</li>
+          </ul>
+        </article></a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Meet Our Team Section -->
+  <section id="team" class="team fade-in" aria-labelledby="team-title">
+    <div class="container">
+      <h2 id="team-title">Meet Our Team</h2>
+      <div class="team-grid stagger">
+        <div class="team-member">
+          <img src="images/team1.jpg" alt="Team member 1" />
+          <h3>Estefany Gallardo</h3>
+          <p>Lead Designer</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team2.jpg" alt="Team member 2" />
+          <h3>Santiago Gallardo</h3>
+          <p>Full Stack Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team3.jpg" alt="Team member 3" />
+          <h3>Arturo Gallardo</h3>
+          <p>Account Management</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team4.jpg" alt="Team member 4" />
+          <h3>Ronald Scott</h3>
+          <p>Network Marketing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. What Our Clients Say (Reviews) Section -->
+  <section id="reviews" class="reviews fade-in" aria-labelledby="reviews-title">
+    <canvas id="reviews-particles"></canvas>
+    <div class="container">
+      <h2 id="reviews-title">What Our Clients Say</h2>
+      <div class="reviews-slider">
+        <div class="review-card active">
+          <div class="review-header">
+            <div>
+              <strong>Laura Gómez</strong>
+              <span>L'Aura Esthetics</span>
+            </div>
+          </div>
+          <p>"Creda captured exactly what I needed. My business looks professional and my clients tell me every day."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div>
+              <strong>Carlos Méndez</strong>
+              <span>MedClinic</span>
+            </div>
+          </div>
+          <p>"The team at Creda is amazing. Fast, creative, and always available."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div>
+              <strong>Sofía Ruiz</strong>
+              <span>Ruiz Consulting</span>
+            </div>
+          </div>
+          <p>"Our conversion rate doubled after launching our new site with Creda."</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div>
+              <strong>Miguel Torres</strong>
+              <span>Torres Fitness</span>
+            </div>
+          </div>
+          <p>"The animations and speed are incredible. Highly recommended!"</p>
+        </div>
+      </div>
+      <div class="reviews-controls">
+        <button class="reviews-prev" aria-label="Previous review">←</button>
+        <button class="reviews-next" aria-label="Next review">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Latest Insights (Blog) Section -->
+  <section id="blog" class="blog fade-in" aria-labelledby="blog-title">
+    <div class="container">
+      <h2 id="blog-title">Latest Insights</h2>
+      <div class="blog-grid stagger">
+        <article class="blog-post">
+          <img src="https://cdn.prod.website-files.com/637859b9a818d7ddb05bb5fb/64d06443d93ac1063634545f_637fc60031be92529bb2e815_value-of-customers.jpeg" alt="Blog post 1" />
+          <h3>How to Convert Visitors into Customers</h3>
+          <p>Tips and strategies for effective web design.</p>
+          <a href="latest-insights.html">Read More</a>
+        </article>
+        <article class="blog-post">
+          <img src="https://southcoastmarketinggroup.com/wp-content/uploads/2022/07/seo.jpg" alt="Blog post 2" />
+          <h3>SEO Best Practices for 2025</h3>
+          <p>Stay ahead with the latest optimization techniques.</p>
+          <a href="latest-insights.html">Read More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. FAQ Section -->
+  <section id="faq" class="faq fade-in" aria-labelledby="faq-title">
+    <div class="container">
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-list stagger">
+        <details>
+          <summary>How long does it take to build a website?</summary>
+          <p>Most projects are completed in 5-10 business days.</p>
+        </details>
+        <details>
+          <summary>Do you offer ongoing support?</summary>
+          <p>Yes, we offer maintenance and support plans.</p>
+        </details>
+        <details>
+          <summary>Can I update my website myself?</summary>
+          <p>Absolutely! We provide easy-to-use admin panels.</p>
+        </details>
+      </div>
+      <a href="faq.html" class="btn faq">See All Questions</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer id="footer" class="footer" role="contentinfo">
+  <div class="container">
+    
+    <p>&copy; 2025 RainyWaves. All rights reserved.</p>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-nav">
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms of Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <ul class="example-2">
+  <li class="icon-content">
+    <a
+      data-social="whatsapp"
+      aria-label="Whatsapp"
+      href="https://api.whatsapp.com/send?phone=+5213314060306&amp;text=I%20would%20like%20more%20information%20!%20"
+    >
+      <div class="filled"></div>
+      <svg
+        xml:space="preserve"
+        viewBox="0 0 24 24"
+        class="bi bi-whatsapp"
+        fill="currentColor"
+        height="24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="currentColor"
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+        ></path>
+      </svg>
+    </a>
+    <div class="tooltip">Whatsapp</div>
+  </li>
+  <li class="icon-content">
+    <a
+      data-social="facebook"
+      aria-label="Facebook"
+      href="https://www.facebook.com/profile.php?id=61578897441316&mibextid=wwXIfr&mibextid=wwXIfr"
+    >
+      <div class="filled"></div>
+      <svg
+        xml:space="preserve"
+        viewBox="0 0 24 24"
+        class="bi bi-facbook"
+        fill="currentColor"
+        height="24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="currentColor"
+          d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"
+        ></path>
+      </svg>
+    </a>
+    <div class="tooltip">Facebook</div>
+  </li>
+  <li class="icon-content">
+    <a
+      data-social="instagram"
+      aria-label="Instagram"
+      href="https://www.instagram.com/rnywaves/"
+    >
+      <div class="filled"></div>
+      <svg
+        xml:space="preserve"
+        viewBox="0 0 16 16"
+        class="bi bi-instagram"
+        fill="currentColor"
+        height="16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="currentColor"
+          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+        ></path>
+      </svg>
+    </a>
+    <div class="tooltip">Instagram</div>
+  </li>
+</ul>
+
+    </nav>
+  </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

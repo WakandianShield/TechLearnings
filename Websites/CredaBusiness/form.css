@@ -1,0 +1,309 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e9f0;
+  z-index: 1000;
+}
+
+/* Container dentro del header */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #66a3f3;
+  text-decoration: none;
+  z-index: 2000;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Lista de navegación */
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #635bff;
+}
+
+/* Botón de llamada a la acción */
+.btn-primary {
+  padding: 0.6rem 1.4rem;
+  background-color: #635bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #4b3ed1;
+}
+
+/* BURGER STYLES */
+.burger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 2100;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #222;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+/* MENU RESPONSIVE */
+@media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    padding: 2rem 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 16px 16px;
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.4s ease;
+  }
+
+  /* Mostrar menú cuando burger está checked */
+  .burger-toggle:checked ~ .nav {
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .nav-list li {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+  }
+
+  .burger-toggle:checked ~ .nav .nav-list li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(1) { transition-delay: 0.1s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(2) { transition-delay: 0.2s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(3) { transition-delay: 0.3s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(4) { transition-delay: 0.4s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(5) { transition-delay: 0.5s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(6) { transition-delay: 0.6s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(7) { transition-delay: 0.7s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(8) { transition-delay: 0.8s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(9) { transition-delay: 0.9s; }
+  .burger-toggle:checked ~ .nav .nav-list li:nth-child(10) { transition-delay: 1s; }
+
+  /* Ocultar el botón Buy Now en móvil */
+  .btn-primary {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+/* Background canvas */
+#background-canvas {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+}
+
+/* Form main container */
+.form-main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1rem 2rem;
+}
+
+/* Form */
+form {
+  background: rgba(255 255 255 / 0.95);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1rem;
+  color: #0a2540;
+}
+
+form h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #635bff;
+  box-shadow: 0 0 5px #635bffaa;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #635bff;
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.9rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #4a42cc;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  form {
+    padding: 1.5rem 1.5rem;
+  }
+  .header-container {
+    padding: 1rem;
+  }
+}
