@@ -2,6 +2,8 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Railway-0B0D0E?logo=railway&logoColor=white&style=plastic" />
+  <img src="https://img.shields.io/badge/Github-181717?logo=github&logoColor=white&style=plastic" />
+  <img src="https://img.shields.io/badge/GithubPages-222222?logo=github-pages&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/C%23-512BD4?logo=dotnet&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white&style=plastic" />
