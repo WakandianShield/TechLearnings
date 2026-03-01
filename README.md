@@ -46,11 +46,13 @@ TechLearnings/
 
 <h2 align="center">Technologies</h2>
 
-
-- Programming Languages: C#, C++
-- Web Development: HTML5, CSS3, JavaScript
-- Hardware: Arduino
-- Networks: Cisco
+- **Programming Languages:** C#, C++, Java, Kotlin
+- **Web Development:** HTML5, CSS3, JavaScript
+- **Mobile Development:** Android apps (Kotlin, XML & Java) using Android Studio
+- **Databases & Backend:** MySQL
+- **Hardware & Electronics:** Arduino
+- **Networking & Simulations:** Cisco Packet Tracer
+- **Deployment / Cloud:** Railway
 
 <h2 align="center">Download</h2>
 
