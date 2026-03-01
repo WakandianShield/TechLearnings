@@ -16,7 +16,7 @@
 <p align="center">
 TechLearnings is a repository where I document and share all my projects and exercises as I learn different technologies.
 <br><br>
-Here you'll find everything from C# and C++ programs to websites with HTML, CSS, and JavaScript, as well as experiments with Arduino and Cisco networks.
+Here you'll find everything from C# and C++ programs to websites with HTML, CSS, and JavaScript, as well as mobile programs or experiments with Arduino and Cisco networks.
 <br><br>
 The goal of this repository is to learn by doing practices and keeping my progress.
 </p>
@@ -46,11 +46,10 @@ TechLearnings/
 
 - **Programming Languages:** C#, C++, Java, Kotlin
 - **Web Development:** HTML5, CSS3, JavaScript
-- **Mobile Development:** Android apps (Kotlin, XML & Java) using Android Studio
+- **Mobile Development:** Kotlin, XML & Java
 - **Databases & Backend:** MySQL
 - **Hardware & Electronics:** Arduino
 - **Networking & Simulations:** Cisco Packet Tracer
-- **Deployment / Cloud:** Railway
 
 <h2 align="center">Download</h2>
 
