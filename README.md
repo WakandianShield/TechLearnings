@@ -1,11 +1,16 @@
 <h1 align="center">TechLearnings </h1>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Railway-0B0D0E?logo=railway&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/C%23-512BD4?logo=dotnet&logoColor=white&style=plastic" />
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/C++-00599C?logo=cplusplus&logoColor=white&style=plastic" />
+  <img src="https://img.shields.io/badge/XML-005FAD?logo=xml&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css&logoColor=white&style=plastic" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/Cisco-1BA0D7?logo=cisco&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/Arduino-00878F?logo=arduino&logoColor=white&style=plastic" />
+  <img src="https://img.shields.io/badge/AndroidStudio-3DDC84?logo=androidstudio&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=white&style=plastic" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=plastic" />
 </p>
@@ -29,6 +34,8 @@ TechLearnings/
 ├── Arduino/            # Arduino Projects
 ├── CPlusPlus/          # C++ Practices
 ├── CSharp/             # C# Practices
+├── Databases/          # Practices for Database Queries
+├── MobileProgramming/  # Kotlin, XML and Java practices
 ├── PacketTracer/       # Cisco Packet Tracer Labs
 ├── WebProgramming/     # HTML, CSS, JS Practices
 ├── Websites/           # Landing Pages Practices 
