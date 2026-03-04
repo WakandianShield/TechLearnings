@@ -82,7 +82,7 @@ cd NewProject
 ```
 - In the directory you are in, copy your project folder:
 ```bash
-xcopy "OriginalProjectFilePath" . /E /I /H /Y
+xcopy "A:\Original\Project\File\Path" . /E /I /H /Y
 ```
 - Use basic Git workflow:
 ```bash
