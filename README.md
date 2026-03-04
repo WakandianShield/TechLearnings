@@ -60,13 +60,34 @@ TechLearnings/
 
 <h2 align="center">Integrate New Projects</h2>
 
-- Clone the repository: ```git clone https://github.com/WakandianShield/TechLearnings.git```
-- In the command prompt, navigate to the repository: ```cd TechLearnings```
-- In the command prompt, navigate to the Technology file you want to improve: ```cd TheTechYouWish```
-- Create a new folder to improve file organization: ```mkdir NewProject```
-- In the command prompt, navigate to the file you just create: ```cd NewProject```
-- In the directory you are in, copy your project folder: ```xcopy "OriginalProjectFilePath" . /E /I /H /Y```
-- Use basic Git workflow: ```git add``` ```git commit -m "New Commit"``` ```git push```
+- Clone the repository:
+```bash
+git clone https://github.com/WakandianShield/TechLearnings.git
+```
+- In the command prompt, navigate to the repository:
+```bash
+- cd TechLearnings
+```
+- In the command prompt, navigate to the Technology file you want to improve:
+```bash
+cd TheTechYouWish
+```
+- Create a new folder to improve file organization:
+```bash
+mkdir NewProject
+```
+- In the command prompt, navigate to the file you just create:
+```bash
+cd NewProject
+```
+- In the directory you are in, copy your project folder:
+```bash
+xcopy "OriginalProjectFilePath" . /E /I /H /Y
+```
+- Use basic Git workflow:
+```bash
+git add . && git commit -m "Update" && git push
+```
 
 <h2 align="center">Contact</h2>
 
