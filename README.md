@@ -58,6 +58,16 @@ TechLearnings/
 - Open the projects with your favorite IDE or code editor.
 - Try, modify, and experiment to learn better.
 
+<h2 align="center">Integrate New Projects</h2>
+
+- Clone the repository: `git clone https://github.com/WakandianShield/TechLearnings.git`
+- In the command prompt, navigate to the repository: `cd TechLearnings`
+- In the command prompt, navigate to the Technology file you want to improve: `cd TheTechYouWish`
+- Create a new folder to improve file organization: `mkdir NewProject`
+- In the command prompt, navigate to the file you just create: `cd NewProject`
+- In the directory you are in, copy your project folder: `xcopy "OriginalProjectFilePath" . /E /I /H /Y`
+- Use basic Git workflow: `git add` `git commit -m "New Commit"` `git push`
+
 <h2 align="center">Contact</h2>
 
 <p align="center">
