@@ -66,7 +66,7 @@ git clone https://github.com/WakandianShield/TechLearnings.git
 ```
 - In the command prompt, navigate to the repository:
 ```bash
-- cd TechLearnings
+cd TechLearnings
 ```
 - In the command prompt, navigate to the Technology file you want to improve:
 ```bash
