@@ -51,7 +51,7 @@ TechLearnings/
 - **Hardware & Electronics:** Arduino
 - **Networking & Simulations:** Cisco Packet Tracer
 
-<h2 align="center">Personal Learning Resources</h2>
+<h2 align="center">Labs & Circuit Practices</h2>
 
 ### Network Infrastructure
 - Notion page with Cisco PT labs: [Network Infrastructure PT Labs](https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link)  
