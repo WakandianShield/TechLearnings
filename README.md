@@ -51,6 +51,16 @@ TechLearnings/
 - **Hardware & Electronics:** Arduino
 - **Networking & Simulations:** Cisco Packet Tracer
 
+<h2 align="center">Personal Learning Resources</h2>
+
+### Network Infrastructure
+- Notion page with Cisco PT labs: [Network Infrastructure PT Labs](https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link)  
+- Personal PT simulation videos (private/not shared on GitHub)
+
+### Digital Systems
+- Notion page with circuit exercises: [Digital Systems Practices](https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link)  
+- Personal videos and PDFs for circuit practices (private)
+
 <h2 align="center">Download</h2>
 
 - Clone the repository: ```git clone https://github.com/WakandianShield/TechLearnings.git```
