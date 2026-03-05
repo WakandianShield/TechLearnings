@@ -55,11 +55,11 @@ TechLearnings/
 
 ### Network Infrastructure
 - Notion page with Cisco PT labs: [Network Infrastructure PT Labs](https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link)  
-- Personal PT simulation videos (private/not shared on GitHub)
+- Personal Cisco PT simulations and documentations
 
 ### Digital Systems
-- Notion page with circuit exercises: [Digital Systems Practices](https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link)  
-- Personal videos and PDFs for circuit practices (private)
+- Notion page with digital circuit exercises: [Digital Systems Practices](https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link)  
+- Personal videos and circuits practices documentations
 
 <h2 align="center">Download</h2>
 
