@@ -58,8 +58,6 @@ TechLearnings/
 This section documents my <b>hands-on laboratory work and technical practices</b> across different areas of computer engineering and electronics.  
 Each page contains notes, experiments, simulations, and implementations developed during my learning process.
 
-<br>
-
 <b><a href="https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link">Network Infrastructure</a></b>  
 Networking notes and practical labs developed using <b>Cisco Packet Tracer</b>.  
 Includes network simulations, topology design, and configuration exercises focused on understanding real network environments.
