@@ -54,12 +54,20 @@ TechLearnings/
 <h2 align="center">Labs & Circuit Practices</h2>
 
 ### Network Infrastructure
-- Notion page with Cisco PT labs: [Network Infrastructure PT Labs](https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link)  
-- Personal Cisco PT simulations and documentations
+- Notion page with networking notes and Cisco Packet Tracer labs: [Network Infrastructure PT Labs](https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link)  
+- Personal network simulations, topologies, and configuration practices
 
 ### Digital Systems
-- Notion page with digital circuit exercises: [Digital Systems Practices](https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link)  
-- Personal videos and circuits practices documentations
+- Notion page with digital electronics exercises: [Digital Systems Practices](https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link)  
+- Logic gate circuits, truth tables, and digital design practices
+
+### Electronic Interfaces
+- Notion page with electronic interface experiments: [Electronic Interfaces Labs](https://www.notion.so/Electronic-Interfaces-31d44980ffef8030aefedfb6cd6f1ae0?pvs=12)  
+- Practical implementations using optocouplers, thyristors, relays, and other interface components
+
+### Computer Architecture
+- Notion page with microcontroller practices: [Computer Architecture Practices](https://www.notion.so/Computer-Architecture-31d44980ffef80ed8557cd71fc4cf170)  
+- Assembly programming and hardware interaction using the **AT89S52 (8051 architecture)**
 
 <h2 align="center">Download</h2>
 
