@@ -42,48 +42,7 @@ TechLearnings/
 
 </p>
 
-<h2 align="center">Technologies</h2>
-
-- **Programming Languages:** C#, C++, Java, Kotlin
-- **Web Development:** HTML5, CSS3, JavaScript
-- **Mobile Development:** Kotlin, XML & Java
-- **Databases & Backend:** MySQL
-- **Hardware & Electronics:** Arduino
-- **Networking & Simulations:** Cisco Packet Tracer
-
-<h2 align="center">Labs & Circuit Practices</h2>
-
-<div align="center">
-
-This section documents my <b>hands-on laboratory work and technical practices</b> across different areas of computer engineering and electronics.  
-Each page contains notes, experiments, simulations, and implementations developed during my learning process.
-
-<b><a href="https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link">Network Infrastructure</a></b>  
-Networking notes and practical labs developed using <b>Cisco Packet Tracer</b>.  
-Includes network simulations, topology design, and configuration exercises focused on understanding real network environments.
-
-<b><a href="https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link">Digital Systems</a></b>  
-Digital electronics practices focused on <b>logic gate circuits, truth tables, and digital design concepts</b>.  
-Includes exercises and experiments exploring the fundamentals of digital logic.
-
-<b><a href="https://www.notion.so/Electronic-Interfaces-31d44980ffef8030aefedfb6cd6f1ae0?pvs=12">Electronic Interfaces</a></b>  
-Practical implementations of <b>electronic interface circuits</b> used to connect and control hardware systems.  
-Experiments include the use of optocouplers, thyristors, relays, and other interface components.
-
-<b><a href="https://www.notion.so/Computer-Architecture-31d44980ffef80ed8557cd71fc4cf170">Computer Architecture</a></b>  
-Microcontroller-based practices focused on <b>low-level hardware interaction</b>.  
-Includes assembly programming and experiments using the <b>AT89S52 (8051 architecture)</b>.
-
-</div>
-
-<h2 align="center">Download</h2>
-
-- Clone the repository: ```git clone https://github.com/WakandianShield/TechLearnings.git```
-- Explore the folder of the technology you want to practice.
-- Open the projects with your favorite IDE or code editor.
-- Try, modify, and experiment to learn better.
-
-<h2 align="center">Integrate New Projects</h2>
+<h2 align="center">Download & Integrate New Projects</h2>
 
 - Clone the repository:
 ```bash
@@ -113,6 +72,31 @@ xcopy "A:\Original\Project\File\Path" . /E /I /H /Y
 ```bash
 git add . && git commit -m "Update" && git push
 ```
+
+<h2 align="center">Labs & Circuit Practices</h2>
+
+<div align="center">
+
+This section documents my <b>hands-on laboratory work and technical practices</b> across different areas of computer engineering and electronics.  
+Each page contains notes, experiments, simulations, and implementations developed during my learning process.
+
+<b><a href="https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link">Network Infrastructure</a></b>  
+Networking notes and practical labs developed using <b>Cisco Packet Tracer</b>.  
+Includes network simulations, topology design, and configuration exercises focused on understanding real network environments.
+
+<b><a href="https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link">Digital Systems</a></b>  
+Digital electronics practices focused on <b>logic gate circuits, truth tables, and digital design concepts</b>.  
+Includes exercises and experiments exploring the fundamentals of digital logic.
+
+<b><a href="https://www.notion.so/Electronic-Interfaces-31d44980ffef8030aefedfb6cd6f1ae0?pvs=12">Electronic Interfaces</a></b>  
+Practical implementations of <b>electronic interface circuits</b> used to connect and control hardware systems.  
+Experiments include the use of optocouplers, thyristors, relays, and other interface components.
+
+<b><a href="https://www.notion.so/Computer-Architecture-31d44980ffef80ed8557cd71fc4cf170">Computer Architecture</a></b>  
+Microcontroller-based practices focused on <b>low-level hardware interaction</b>.  
+Includes assembly programming and experiments using the <b>AT89S52 (8051 architecture)</b>.
+<br><br>
+</div>
 
 <h2 align="center">Contact</h2>
 
