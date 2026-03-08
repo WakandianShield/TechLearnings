@@ -53,21 +53,30 @@ TechLearnings/
 
 <h2 align="center">Labs & Circuit Practices</h2>
 
-### Network Infrastructure
-- Notion page with networking notes and Cisco Packet Tracer labs: [Network Infrastructure PT Labs](https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link)  
-- Personal network simulations, topologies, and configuration practices
+<div align="center">
 
-### Digital Systems
-- Notion page with digital electronics exercises: [Digital Systems Practices](https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link)  
-- Logic gate circuits, truth tables, and digital design practices
+This section documents my <b>hands-on laboratory work and technical practices</b> across different areas of computer engineering and electronics.  
+Each page contains notes, experiments, simulations, and implementations developed during my learning process.
 
-### Electronic Interfaces
-- Notion page with electronic interface experiments: [Electronic Interfaces Labs](https://www.notion.so/Electronic-Interfaces-31d44980ffef8030aefedfb6cd6f1ae0?pvs=12)  
-- Practical implementations using optocouplers, thyristors, relays, and other interface components
+<br>
 
-### Computer Architecture
-- Notion page with microcontroller practices: [Computer Architecture Practices](https://www.notion.so/Computer-Architecture-31d44980ffef80ed8557cd71fc4cf170)  
-- Assembly programming and hardware interaction using the **AT89S52 (8051 architecture)**
+<b><a href="https://www.notion.so/Network-Infraestructure-0aa18ad704ee4f05b4d3fabbc80c9748?source=copy_link">Network Infrastructure</a></b>  
+Networking notes and practical labs developed using <b>Cisco Packet Tracer</b>.  
+Includes network simulations, topology design, and configuration exercises focused on understanding real network environments.
+
+<b><a href="https://www.notion.so/Digital-Systems-b4ad5608f5f742d895c989137bf086ce?source=copy_link">Digital Systems</a></b>  
+Digital electronics practices focused on <b>logic gate circuits, truth tables, and digital design concepts</b>.  
+Includes exercises and experiments exploring the fundamentals of digital logic.
+
+<b><a href="https://www.notion.so/Electronic-Interfaces-31d44980ffef8030aefedfb6cd6f1ae0?pvs=12">Electronic Interfaces</a></b>  
+Practical implementations of <b>electronic interface circuits</b> used to connect and control hardware systems.  
+Experiments include the use of optocouplers, thyristors, relays, and other interface components.
+
+<b><a href="https://www.notion.so/Computer-Architecture-31d44980ffef80ed8557cd71fc4cf170">Computer Architecture</a></b>  
+Microcontroller-based practices focused on <b>low-level hardware interaction</b>.  
+Includes assembly programming and experiments using the <b>AT89S52 (8051 architecture)</b>.
+
+</div>
 
 <h2 align="center">Download</h2>
 
