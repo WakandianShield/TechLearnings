@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Brainrot | Game</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="ChooseChar">
+        <h1>elige el personaje mas pro</h1>
+        <article id="plant" class="card">
+            <img src="plant.png" alt="Imagen de Personaje de Planta">
+            <p>BR BR PATAPIM</p>
+        </article>
+        <article id="fire" class="card">
+            <img src="fire.png" alt="Imagen de Personaje de Fuego">
+            <p>TUNG TUNG TUNG SAHUR</p>
+        </article>
+        <article id="water" class="card">
+            <img src="water.png" alt="Imagen de Personaje de Agua">
+            <p>TRALALERO TRALALA</p>
+        </article>
+    </section>
+
+    <section id="CombatScreen">
+        <div id="players">
+            <div id="enemy">
+                <img id="enemy" src="" alt="Imagen del Enemigo">
+                <p>
+                    
+                </p>
+            </div>
+            <div id="vs">
+                <p>VS</p>
+            </div>
+            <div id="selected">
+                <img id="selected" src="" alt="Imagen del Personaje">
+                <p>
+
+                </p>
+            </div>
+        </div>
+
+        <div id="actions">
+            <div id="actions--fire">Fire</div>
+            <div id="actions--water">Water</div>
+            <div id="actions--plant">Plant</div>
+            <div id="actions--heal">Heal</div>
+        </div>
+    </section>
+
+    <section id="ResultsScreen">
+        <div>
+            <p id="results">
+
+            </p>
+            <img src="" alt="Imagen del Resultado">
+            <div id="restart">Volver a jugar</div>
+
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

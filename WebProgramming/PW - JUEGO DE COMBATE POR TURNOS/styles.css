@@ -1,0 +1,413 @@
+:root {
+    --bg-main: linear-gradient(135deg, #000000, #242424);
+    --white: #fff;
+
+    --fire-main: #ff3c3c;
+    --water-main: #00aaff;
+    --plant-main: #00ff88;
+
+    --fire-bg: linear-gradient(145deg, #5a0000, #a10000);
+    --water-bg: linear-gradient(145deg, #002f5a, #005fa1);
+    --plant-bg: linear-gradient(145deg, #004d05, #008f0a);
+
+    --fire-hover: linear-gradient(145deg, #a10000, #ff3c3c);
+    --water-hover: linear-gradient(145deg, #005fa1, #00aaff);
+    --plant-hover: linear-gradient(145deg, #008f0a, #00ff88);
+
+    --heal-bg: linear-gradient(145deg, #313131, #9e9e9e);
+    --heal-hover: linear-gradient(145deg, #9e9e9e, #ffffff);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Bangers', cursive;
+    background: var(--bg-main);
+    color: var(--white);
+    padding: 50px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 100px;
+    color: var(--white);
+    text-shadow: 0 0 20px var(--white);
+}
+
+#vs {
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    color: var(--white);
+    text-shadow: 0 0 20px var(--white);
+}
+
+#vs p {
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    color: var(--white);
+    text-shadow: 0 0 20px var(--white);
+}
+
+#ChooseChar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+article {
+    width: 350px;
+    height: 350px;
+    margin: 70px;
+    border-radius: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform .35s ease, text-shadow .35s ease;
+}
+
+article:hover {
+    text-shadow: 0 0 10px var(--main);
+    transform: translateY(-10px) scale(1.05);
+}
+
+article img {
+    width: 200px;
+    object-fit: contain;
+    transition: transform .3s ease;
+}
+
+article:hover img {
+    transform: scale(1.1) rotate(3deg);
+}
+
+#plant {
+    --main: var(--plant-main);
+    background: var(--plant-bg);
+    box-shadow: 0 0 50px var(--main);
+}
+
+#fire {
+    --main: var(--fire-main);
+    background: var(--fire-bg);
+    box-shadow: 0 0 50px var(--main);
+}
+
+#water {
+    --main: var(--water-main);
+    background: var(--water-bg);
+    box-shadow: 0 0 50px var(--main);
+}
+
+#plant img { 
+    filter: drop-shadow(0 0 10px var(--plant-main)); 
+}
+
+#fire img { 
+    filter: drop-shadow(0 0 10px var(--fire-main)); 
+}
+
+#water img { 
+    filter: drop-shadow(0 0 10px var(--water-main)); 
+}
+
+#CombatScreen {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    background: var(--bg-main);
+    height: 100%;
+    width: 100%;
+}
+
+#players {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+#players p {
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0 0 10px var(--white);
+}
+
+#enemy, #selected {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+#enemy img, #selected img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#actions {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#actions--fire,
+#actions--water,
+#actions--plant,
+#actions--heal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 55px;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#actions--fire {
+    background: var(--fire-bg);
+    box-shadow: 0 0 20px var(--fire-main);
+}
+
+#actions--fire:hover {
+    background: var(--fire-hover);
+    box-shadow: 0 0 30px var(--fire-main);
+    scale: 1.1;
+}
+
+#actions--water {
+    background: var(--water-bg);
+    box-shadow: 0 0 20px var(--water-main);
+}
+
+#actions--water:hover {
+    background: var(--water-hover);
+    box-shadow: 0 0 30px var(--water-main);
+    scale: 1.1;
+}
+
+#actions--plant {
+    background: var(--plant-bg);
+    box-shadow: 0 0 20px var(--plant-main);
+}
+
+#actions--plant:hover {
+    background: var(--plant-hover);
+    box-shadow: 0 0 30px var(--plant-main);
+    scale: 1.1;
+}
+
+#actions--heal {
+    background: var(--heal-bg);
+    box-shadow: 0 0 20px var(--white);
+}
+
+#actions--heal:hover {
+    background: var(--heal-hover);
+    box-shadow: 0 0 30px var(--white);
+    scale: 1.1;
+}
+
+#ResultsScreen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 0 0 20px var(--white);
+}
+
+#ResultsScreen img {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+}
+
+
+#ResultsScreen div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 60px;
+    }
+    #players {
+        padding: 40px;
+    }
+    article {
+        width: 250px;
+        height: 250px;
+        margin: 30px;
+        font-size: 20px;
+    }
+    #enemy, #selected {
+        width: 200px;
+        height: 200px;
+    }
+    #ResultsScreen {
+        font-size: 60px;
+    }
+    #ResultsScreen img {
+        width: 200px;
+        height: 200px;
+    }
+    #actions--fire,
+    #actions--water,
+    #actions--plant,
+    #actions--heal {
+        width: 120px;
+        height: 120px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+    #ChooseChar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    article {
+        width: 180px;
+        height: 180px;
+        margin: 10px;
+        font-size: 16px;
+    }
+    #CombatScreen {
+        grid-template-rows: 2fr 1fr;
+    }
+    #players {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    #enemy, #selected {
+        width: 120px;
+        height: 120px;
+    }
+    #vs p {
+        font-size: 28px;
+    }
+    #actions {
+        gap: 10px;
+    }
+    #actions--fire,
+    #actions--water,
+    #actions--plant,
+    #actions--heal {
+        width: 70px;
+        height: 70px;
+        font-size: 14px;
+        border-radius: 20px;
+    }
+    #ResultsScreen {
+        font-size: 30px;
+    }
+    #ResultsScreen img {
+        width: 80px;
+        height: 80px;
+    }
+    #restart {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 22px;
+    }
+    #ChooseChar {
+        gap: 10px;
+    }
+    article {
+        width: 110px;
+        height: 110px;
+        font-size: 10px;
+        margin: 5px;
+        border-radius: 20px;
+    }
+    article img {
+        width: 60px;
+    }
+    #enemy, #selected {
+        width: 60px;
+        height: 60px;
+    }
+    #vs p {
+        font-size: 16px;
+    }
+    #actions--fire,
+    #actions--water,
+    #actions--plant,
+    #actions--heal {
+        width: 40px;
+        height: 40px;
+        font-size: 8px;
+        border-radius: 10px;
+    }
+    #ResultsScreen {
+        font-size: 16px;
+    }
+    #ResultsScreen img {
+        width: 40px;
+        height: 40px;
+    }
+    #restart {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}
+
+#restart {
+    padding: 10px 20px;
+    background: #313131;
+    box-shadow: 0 0 15px #424242;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#restart:hover {
+    background: #9e9e9e;
+    box-shadow: 0 0 15px #ffffff;
+    color: var(--white);
+    scale: 1.1;
+}
+
