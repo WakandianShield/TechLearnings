@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="2dp"
+    android:background="#F3EDFF">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALCULADORA DE CIRCUITO SERIE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#1976D2"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltaje Total (V): "
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etVoltage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ej: 12"
+            android:inputType="numberDecimal"
+            android:textSize="14sp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/gridResistors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="5"
+        android:layout_marginTop="4dp">
+
+        <EditText android:id="@+id/etR1" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R1 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR2" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R2 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR3" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R3 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR4" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R4 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR5" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R5 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR6" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R6 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR7" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R7 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR8" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R8 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR9" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R9 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+        <EditText android:id="@+id/etR10" android:layout_width="0dp" android:layout_gravity="fill_horizontal" android:layout_columnWeight="1" android:hint="R10 (Ω)" android:inputType="numberDecimal" android:textSize="12sp" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvFinalResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultados finales"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:textColor="#5323AF" />
+
+    <LinearLayout
+        android:id="@+id/layoutResults"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:padding="4dp"
+        android:background="#F3EDFF"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivCircuit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_circuit"
+            android:contentDescription="Imagen del circuito" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROCEDIMIENTO:"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvCalculations"
+        android:layout_width="match_parent"
+        android:layout_height="242dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:background="#F3EDFF"
+        android:padding="8dp"
+        android:text="..."
+        android:textColor="#444444"
+        android:textSize="9sp"
+        android:typeface="monospace" />
+
+</LinearLayout>
