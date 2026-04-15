@@ -2,7 +2,7 @@ const datos = [
     {
         tipo: "plant",
         nombre: "BR BR PATAPIM",
-        imagen: "plant.png",
+        imagen: "assets/plant.png",
         vida: 100,
         ataque: 20,
         defensa: 10
@@ -10,7 +10,7 @@ const datos = [
     {
         tipo: "fire",
         nombre: "TUNG TUNG TUNG SAHUR",
-        imagen: "fire.png",
+        imagen: "assets/fire.png",
         vida: 100,
         ataque: 25,
         defensa: 15
@@ -18,39 +18,117 @@ const datos = [
     {
         tipo: "water",
         nombre: "TRALALERO TRALALA",
-        imagen: "water.png",
+        imagen: "assets/water.png",
         vida: 100,
         ataque: 15,
         defensa: 20
     }
 ];
 
-let jugadorActual = null;
-let enemigoActual = null;
-let turnoJugador = true;
+const acciones = [
+    { tipo: "fire",  emoji: "🔥", label: "Fire"  },
+    { tipo: "water", emoji: "💧", label: "Water" },
+    { tipo: "plant", emoji: "🌿", label: "Plant" },
+    { tipo: "heal",  emoji: "💊", label: "Heal"  }
+];
 
-function getRandomEnemyIndex(excludeIndex) {
-    let idx;
-    do {
-        idx = Math.floor(Math.random() * datos.length);
-    } while (idx === excludeIndex);
-    return idx;
+let jugadorActual = null;
+let enemigoActual  = null;
+let turnoJugador   = true;
+let victorias      = 0;
+
+
+function actualizarHP(quien, vida) {
+    const porcentaje = Math.max(0, vida);
+    const barra  = document.getElementById(`${quien}-hp-bar`);
+    const texto  = document.getElementById(`${quien}-hp-text`);
+
+    barra.style.width = porcentaje + "%";
+
+    barra.classList.remove("medium", "low");
+    if (porcentaje <= 25) {
+        barra.classList.add("low");
+    } else if (porcentaje <= 50) {
+        barra.classList.add("medium");
+    }
+
+    texto.textContent = porcentaje;
 }
 
-function calcularResultado(playerType, enemyType) {
-    if (playerType === enemyType) return 1;
+function animarDano(quien) {
+    const img = document.getElementById(`${quien}-img`);
+    img.classList.remove("shake");
+    void img.offsetWidth;
+    img.classList.add("shake");
+}
+
+function actualizarContadorVictorias() {
+    const contador = document.getElementById("win-counter-text");
+    contador.textContent = `Victorias: ${victorias}`;
+}
+
+function generarTarjetas() {
+    const ChooseScreen = document.getElementById("ChooseChar");
+
+    const tarjetasViejas = ChooseScreen.querySelectorAll("article");
+    tarjetasViejas.forEach(t => t.remove());
+
+    datos.forEach((personaje, index) => {
+        const tarjeta = document.createElement("article");
+        tarjeta.classList.add(personaje.tipo);
+
+        const imagen = document.createElement("img");
+        imagen.src = personaje.imagen;
+        imagen.alt = `Imagen de ${personaje.nombre}`;
+
+        const nombre = document.createElement("p");
+        nombre.textContent = personaje.nombre;
+
+        tarjeta.appendChild(imagen);
+        tarjeta.appendChild(nombre);
+
+        tarjeta.addEventListener("click", () => seleccionarPersonaje(index));
+
+        ChooseScreen.appendChild(tarjeta);
+    });
+}
+
+function generarBotonesAccion() {
+    const contenedor = document.getElementById("actions");
+
+    contenedor.innerHTML = "";
+
+    acciones.forEach(accion => {
+        const boton = document.createElement("button");
+        boton.id = `actions--${accion.tipo}`;
+        boton.classList.add("action-btn", accion.tipo);
+        boton.textContent = accion.emoji;
+        boton.title = accion.label;
+
+        if (accion.tipo === "heal") {
+            boton.addEventListener("click", curar);
+        } else {
+            boton.addEventListener("click", () => realizarAtaque(accion.tipo));
+        }
+
+        contenedor.appendChild(boton);
+    });
+}
+
+function calcularMultiplicador(tipoAtacante, tipoDefensor) {
+    if (tipoAtacante === tipoDefensor) return 1;
     if (
-        (playerType === "fire" && enemyType === "plant") ||
-        (playerType === "plant" && enemyType === "water") ||
-        (playerType === "water" && enemyType === "fire")
+        (tipoAtacante === "fire"  && tipoDefensor === "plant") ||
+        (tipoAtacante === "plant" && tipoDefensor === "water") ||
+        (tipoAtacante === "water" && tipoDefensor === "fire")
     ) {
-        return 1.5;
+        return 1.5; 
     }
-    return 0.5;
+    return 0.5; 
 }
 
 function atacar(atacante, defensor, tipoAtaque) {
-    const multiplicador = calcularResultado(tipoAtaque, defensor.tipo);
+    const multiplicador = calcularMultiplicador(tipoAtaque, defensor.tipo);
     let daño = atacante.ataque * multiplicador - defensor.defensa * 0.3;
     if (daño < 1) daño = 1;
     defensor.vida -= daño;
@@ -58,56 +136,19 @@ function atacar(atacante, defensor, tipoAtaque) {
     return Math.floor(daño);
 }
 
-function turnoEnemigo() {
-    const vsp = document.getElementById("vs");
-    const Resultados = document.getElementById("results");
-    const ResultScreen = document.getElementById("ResultsScreen");
-    const CombatScreen = document.getElementById("CombatScreen");
-
-    ResultScreen.style.display = "none";
-
-    if (enemigoActual.vida <= 0 || jugadorActual.vida <= 0) return;
-
-    const tipos = ["fire", "water", "plant"];
-    const ataqueRandom = tipos[Math.floor(Math.random() * tipos.length)];
-
-    const daño = atacar(enemigoActual, jugadorActual, ataqueRandom);
-
-    vsp.textContent = `Enemigo usó ${ataqueRandom.toUpperCase()} e hizo ${daño} de daño. Tu vida: ${jugadorActual.vida}`;
-
-    if (jugadorActual.vida <= 0) {
-        CombatScreen.style.display = "none";
-        Resultados.textContent = "PERDISTE NUB DAS UN CHINGO DE ASCO";
-        ResultScreen.style.display = "flex";
-        ResultScreen.querySelector("img").src = "defeat.webp";
-        return;
-    }
-
-    turnoJugador = true;
-}
-
 function realizarAtaque(tipoAtaque) {
-    const vsp = document.getElementById("vs");
-    const Resultados = document.getElementById("results");
-    const ResultScreen = document.getElementById("ResultsScreen");
-    const CombatScreen = document.getElementById("CombatScreen");
-    const resultImg = ResultScreen.querySelector("img");
-
-    ResultScreen.style.display = "none";
-
     if (!turnoJugador) return;
 
     const daño = atacar(jugadorActual, enemigoActual, tipoAtaque);
+    animarDano("enemy");
+    actualizarHP("enemy", enemigoActual.vida);
 
-    vsp.textContent = `Usaste ${tipoAtaque.toUpperCase()} e hiciste ${daño} de daño. Vida enemigo: ${enemigoActual.vida}`;
+    const log = document.getElementById("battle-log");
+    log.textContent = `Usaste ${tipoAtaque.toUpperCase()} → ${daño} dmg al enemigo (HP: ${enemigoActual.vida})`;
 
     if (enemigoActual.vida <= 0) {
-        CombatScreen.style.display = "none";
-        Resultados.textContent = "GANASTE PRO PLAYER SIGMA CHAD";
-        ResultScreen.style.display = "flex";
-        resultImg.src = "victory.webp";
+        terminarCombate(true);
         return;
-        
     }
 
     turnoJugador = false;
@@ -115,89 +156,113 @@ function realizarAtaque(tipoAtaque) {
 }
 
 function curar() {
-    const vsp = document.getElementById("vs");
-
     if (!turnoJugador) return;
 
     jugadorActual.vida += 20;
     if (jugadorActual.vida > 100) jugadorActual.vida = 100;
 
-    vsp.textContent = `Te curaste. Vida actual: ${jugadorActual.vida}`;
+    actualizarHP("player", jugadorActual.vida);
+
+    const log = document.getElementById("battle-log");
+    log.textContent = `Te curaste → HP actual: ${jugadorActual.vida}`;
 
     turnoJugador = false;
     setTimeout(turnoEnemigo, 1000);
 }
 
-function loadCards() {
-    const card = document.querySelectorAll("article");
-    const texto = document.querySelectorAll("article p");
-    const ChooseScreen = document.getElementById("ChooseChar");
-    const CombatScreen = document.getElementById("CombatScreen");
-    const ResultsScreen = document.getElementById("ResultsScreen");
+function turnoEnemigo() {
+    if (enemigoActual.vida <= 0 || jugadorActual.vida <= 0) return;
 
-    const enemyImg = document.querySelector("#CombatScreen #enemy img");
-    const enemyName = document.querySelector("#CombatScreen #enemy p");
-    const playerImg = document.querySelector("#CombatScreen #selected img");
-    const playerName = document.querySelector("#CombatScreen #selected p");
+    const tipos = ["fire", "water", "plant"];
+    const ataqueRandom = tipos[Math.floor(Math.random() * tipos.length)];
 
-    CombatScreen.style.display = "none";
-    ResultsScreen.style.display = "none";
+    const daño = atacar(enemigoActual, jugadorActual, ataqueRandom);
+    animarDano("player");
+    actualizarHP("player", jugadorActual.vida);
 
-    card.forEach((card, index) => {
-        card.addEventListener("click", () => {
-            
-            ChooseScreen.style.display = "none";
-            CombatScreen.style.display = "grid";
+    const log = document.getElementById("battle-log");
+    log.textContent = `Enemigo usó ${ataqueRandom.toUpperCase()} → ${daño} dmg a ti (HP: ${jugadorActual.vida})`;
 
-            const enemyIndex = getRandomEnemyIndex(index);
-            const enemigo = datos[enemyIndex];
-            const personaje = datos[index];
+    if (jugadorActual.vida <= 0) {
+        terminarCombate(false);
+        return;
+    }
 
-            jugadorActual = { ...personaje };
-            enemigoActual = { ...enemigo };
-
-            enemyImg.src = enemigo.imagen;
-            enemyImg.alt = enemigo.nombre;
-            enemyName.textContent = enemigo.nombre;
-
-            playerImg.src = personaje.imagen;
-            playerImg.alt = personaje.nombre;
-            playerName.textContent = personaje.nombre;
-
-            turnoJugador = true;
-        });
-    });
+    turnoJugador = true;
 }
 
-function actions() {
-    const restartBtn = document.getElementById("restart");
-    restartBtn.addEventListener("click", restartGame);
-    const fireBtn = document.getElementById("actions--fire");
-    const waterBtn = document.getElementById("actions--water");
-    const plantBtn = document.getElementById("actions--plant");
-    const healBtn = document.getElementById("actions--heal");
+function seleccionarPersonaje(index) {
+    const ChooseScreen  = document.getElementById("ChooseChar");
+    const CombatScreen  = document.getElementById("CombatScreen");
 
-    fireBtn.addEventListener("click", () => realizarAtaque("fire"));
-    waterBtn.addEventListener("click", () => realizarAtaque("water"));
-    plantBtn.addEventListener("click", () => realizarAtaque("plant"));
-    healBtn.addEventListener("click", () => curar());
-}
+    let enemyIndex;
+    do {
+        enemyIndex = Math.floor(Math.random() * datos.length);
+    } while (enemyIndex === index);
 
-function restartGame() {
-    const ChooseScreen = document.getElementById("ChooseChar");
-    const CombatScreen = document.getElementById("CombatScreen");
-    const ResultScreen = document.getElementById("ResultsScreen");
-    const texto = document.querySelectorAll("article p");
-    const vsp = document.getElementById("vs");
+    jugadorActual = { ...datos[index] };
+    enemigoActual  = { ...datos[enemyIndex] };
 
-    jugadorActual = null;
-    enemigoActual = null;
+    document.getElementById("player-img").src  = jugadorActual.imagen;
+    document.getElementById("player-img").alt  = jugadorActual.nombre;
+    document.getElementById("player-name").textContent = jugadorActual.nombre;
+
+    document.getElementById("enemy-img").src   = enemigoActual.imagen;
+    document.getElementById("enemy-img").alt   = enemigoActual.nombre;
+    document.getElementById("enemy-name").textContent = enemigoActual.nombre;
+
+    actualizarHP("player", jugadorActual.vida);
+    actualizarHP("enemy",  enemigoActual.vida);
+
+    document.getElementById("battle-log").textContent = "¡Que empiece el combate!";
+
     turnoJugador = true;
 
-    ResultScreen.style.display = "none";
-    CombatScreen.style.display = "none";
-    ChooseScreen.style.display = "flex";
+    ChooseScreen.style.display  = "none";
+    CombatScreen.style.display  = "grid";
 }
 
-loadCards();
-actions();
+function terminarCombate(gano) {
+    const CombatScreen  = document.getElementById("CombatScreen");
+    const ResultsScreen = document.getElementById("ResultsScreen");
+    const resultados    = document.getElementById("results");
+    const resultImg     = document.getElementById("result-img");
+
+    CombatScreen.style.display = "none";
+
+    if (gano) {
+        victorias++;
+        actualizarContadorVictorias();
+        resultados.textContent = "GANASTE PRO PLAYER SIGMA CHAD";
+        resultImg.src = "assets/victory.webp";
+    } else {
+        resultados.textContent = "PERDISTE NUB DAS UN CHINGO DE ASCO";
+        resultImg.src = "assets/defeat.webp";
+    }
+
+    ResultsScreen.style.display = "flex";
+}
+
+function reiniciarJuego() {
+    const ChooseScreen  = document.getElementById("ChooseChar");
+    const CombatScreen  = document.getElementById("CombatScreen");
+    const ResultsScreen = document.getElementById("ResultsScreen");
+
+    jugadorActual = null;
+    enemigoActual  = null;
+    turnoJugador   = true;
+
+    ResultsScreen.style.display = "none";
+    CombatScreen.style.display  = "none";
+    ChooseScreen.style.display  = "flex";
+}
+
+function init() {
+    generarTarjetas();
+    generarBotonesAccion();
+    document.getElementById("CombatScreen").style.display  = "none";
+    document.getElementById("ResultsScreen").style.display = "none";
+    document.getElementById("restart").addEventListener("click", reiniciarJuego);
+}
+
+document.addEventListener("DOMContentLoaded", init);

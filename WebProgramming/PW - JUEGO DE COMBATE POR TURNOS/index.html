@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,61 +13,62 @@
 </head>
 
 <body>
+
     <section id="ChooseChar">
         <h1>elige el personaje mas pro</h1>
-        <article id="plant" class="card">
-            <img src="plant.png" alt="Imagen de Personaje de Planta">
-            <p>BR BR PATAPIM</p>
-        </article>
-        <article id="fire" class="card">
-            <img src="fire.png" alt="Imagen de Personaje de Fuego">
-            <p>TUNG TUNG TUNG SAHUR</p>
-        </article>
-        <article id="water" class="card">
-            <img src="water.png" alt="Imagen de Personaje de Agua">
-            <p>TRALALERO TRALALA</p>
-        </article>
     </section>
 
     <section id="CombatScreen">
         <div id="players">
-            <div id="enemy">
-                <img id="enemy" src="" alt="Imagen del Enemigo">
-                <p>
-                    
-                </p>
+
+            <div id="enemy-container">
+                <img id="enemy-img" src="" alt="Imagen del Enemigo">
+                <div class="hp-bar-wrapper">
+                    <span class="hp-label">HP</span>
+                    <div class="hp-bar-bg">
+                        <div class="hp-bar-fill" id="enemy-hp-bar"></div>
+                    </div>
+                    <span class="hp-text" id="enemy-hp-text">100</span>
+                </div>
+                <p id="enemy-name"></p>
             </div>
+
             <div id="vs">
                 <p>VS</p>
+                <p id="battle-log"></p>
+                <div id="win-counter-wrapper">
+                    <p id="win-counter-text">VICTORIAS: 0</p>
+                </div>
             </div>
-            <div id="selected">
-                <img id="selected" src="" alt="Imagen del Personaje">
-                <p>
 
-                </p>
+            <div id="player-container">
+                <img id="player-img" src="" alt="Imagen del Personaje">
+                <div class="hp-bar-wrapper">
+                    <span class="hp-label">HP</span>
+                    <div class="hp-bar-bg">
+                        <div class="hp-bar-fill" id="player-hp-bar"></div>
+                    </div>
+                    <span class="hp-text" id="player-hp-text">100</span>
+                    
+                </div>
+                <p id="player-name"></p>
             </div>
+
         </div>
 
         <div id="actions">
-            <div id="actions--fire">Fire</div>
-            <div id="actions--water">Water</div>
-            <div id="actions--plant">Plant</div>
-            <div id="actions--heal">Heal</div>
         </div>
     </section>
 
     <section id="ResultsScreen">
         <div>
-            <p id="results">
-
-            </p>
-            <img src="" alt="Imagen del Resultado">
+            <p id="results"></p>
+            <img id="result-img" src="" alt="Imagen del Resultado">
             <div id="restart">Volver a jugar</div>
-
         </div>
     </section>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

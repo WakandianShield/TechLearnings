@@ -41,22 +41,6 @@ h1 {
     text-shadow: 0 0 20px var(--white);
 }
 
-#vs {
-    width: 100%;
-    text-align: center;
-    font-size: 48px;
-    color: var(--white);
-    text-shadow: 0 0 20px var(--white);
-}
-
-#vs p {
-    width: 100%;
-    text-align: center;
-    font-size: 48px;
-    color: var(--white);
-    text-shadow: 0 0 20px var(--white);
-}
-
 #ChooseChar {
     display: flex;
     justify-content: center;
@@ -66,8 +50,8 @@ h1 {
 }
 
 article {
-    width: 350px;
-    height: 350px;
+    width: 700px;
+    height: 700px;
     margin: 70px;
     border-radius: 55px;
     display: flex;
@@ -76,7 +60,7 @@ article {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
     cursor: pointer;
     position: relative;
@@ -90,7 +74,9 @@ article:hover {
 }
 
 article img {
-    width: 200px;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
     object-fit: contain;
     transition: transform .3s ease;
 }
@@ -99,35 +85,42 @@ article:hover img {
     transform: scale(1.1) rotate(3deg);
 }
 
-#plant {
+article.plant {
     --main: var(--plant-main);
     background: var(--plant-bg);
     box-shadow: 0 0 50px var(--main);
 }
 
-#fire {
+article.fire {
     --main: var(--fire-main);
     background: var(--fire-bg);
     box-shadow: 0 0 50px var(--main);
 }
 
-#water {
+article.water {
     --main: var(--water-main);
     background: var(--water-bg);
     box-shadow: 0 0 50px var(--main);
 }
 
-#plant img { 
+article.plant img { 
     filter: drop-shadow(0 0 10px var(--plant-main)); 
 }
 
-#fire img { 
+article.fire img { 
     filter: drop-shadow(0 0 10px var(--fire-main)); 
 }
 
-#water img { 
+article.water img { 
     filter: drop-shadow(0 0 10px var(--water-main)); 
 }
+
+
+
+
+
+
+
 
 #CombatScreen {
     display: grid;
@@ -144,21 +137,37 @@ article:hover img {
     padding: 100px;
 }
 
-#players p {
-    font-size: 25px;
-    font-weight: bold;
-    text-shadow: 0 0 10px var(--white);
+#player-container, #enemy-container {
+    width: 500px !important;
+    height: 500px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
-#enemy, #selected {
+#player-container img, #enemy-container img {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+#players p {
+    width: fit-content;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#enemy-container, #player-container {
     width: 300px;
     height: 300px;
     text-align: center;
 }
 
-#enemy img, #selected img {
-    width: 100%;
-    height: 100%;
+#enemy-container img, #player-container img {
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -169,10 +178,7 @@ article:hover img {
     align-items: center;
 }
 
-#actions--fire,
-#actions--water,
-#actions--plant,
-#actions--heal {
+.action-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,6 +187,7 @@ article:hover img {
     margin: 10px;
     border-radius: 55px;
     font-size: 50px;
+    font-family: 'Bangers', cursive;
     text-transform: uppercase;
     color: var(--white);
     border: none;
@@ -188,49 +195,147 @@ article:hover img {
     transition: all .3s ease;
 }
 
-#actions--fire {
+.action-btn.fire {
     background: var(--fire-bg);
     box-shadow: 0 0 20px var(--fire-main);
 }
-
-#actions--fire:hover {
+.action-btn.fire:hover {
     background: var(--fire-hover);
     box-shadow: 0 0 30px var(--fire-main);
     scale: 1.1;
 }
 
-#actions--water {
+.action-btn.water {
     background: var(--water-bg);
     box-shadow: 0 0 20px var(--water-main);
 }
-
-#actions--water:hover {
+.action-btn.water:hover {
     background: var(--water-hover);
     box-shadow: 0 0 30px var(--water-main);
     scale: 1.1;
 }
 
-#actions--plant {
+.action-btn.plant {
     background: var(--plant-bg);
     box-shadow: 0 0 20px var(--plant-main);
 }
-
-#actions--plant:hover {
+.action-btn.plant:hover {
     background: var(--plant-hover);
     box-shadow: 0 0 30px var(--plant-main);
     scale: 1.1;
 }
 
-#actions--heal {
+.action-btn.heal {
     background: var(--heal-bg);
     box-shadow: 0 0 20px var(--white);
 }
-
-#actions--heal:hover {
+.action-btn.heal:hover {
     background: var(--heal-hover);
     box-shadow: 0 0 30px var(--white);
     scale: 1.1;
 }
+
+#vs {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 70px !important;
+    color: var(--white);
+    text-shadow: 0 0 20px var(--white);
+}
+
+#vs p {
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    font-size: 70px !important;
+    text-shadow: 0 0 20px var(--white);
+}
+
+#battle-log {
+    text-shadow: none !important;
+    color: var(--white) !important;
+    opacity: 0.85;
+    padding: 0 10px;
+}
+
+#win-counter-wrapper {
+    width: fit-content;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#win-counter-text {
+    text-shadow: 0 0 10px gold !important;
+    color: gold;
+    background: rgba(255,215,0,0.08);
+    border: 1px solid rgba(255,215,0,0.3);
+    border-radius: 12px;
+    padding: 4px 16px;
+}
+
+.hp-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.hp-label {
+    font-size: 30px;
+    color: var(--white);
+    min-width: 24px;
+}
+
+.hp-bar-bg {
+    width: 300px;
+    height: 14px;
+    background: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.hp-bar-fill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00ff88, #00cc66);
+    border-radius: 8px;
+    transition: width 0.4s ease, background 0.4s ease;
+}
+
+.hp-bar-fill.medium {
+    background: linear-gradient(90deg, #ffcc00, #ff9900);
+}
+
+.hp-bar-fill.low {
+    background: linear-gradient(90deg, #ff4444, #cc0000);
+}
+
+.hp-text {
+    font-size: 30px;
+    min-width: 32px;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 #ResultsScreen {
     width: 100%;
@@ -238,176 +343,53 @@ article:hover img {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
     font-weight: bold;
     text-shadow: 0 0 20px var(--white);
+}
+
+#results {
+    font-size: 100px !important;
+    text-align: center;
 }
 
 #ResultsScreen img {
     width: 350px;
     height: 350px;
     object-fit: contain;
+    margin-bottom: 20px;
 }
-
 
 #ResultsScreen div {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
+    font-size: 40px;
     align-items: center;
 }
 
-
-@media (max-width: 1200px) {
-    h1 {
-        font-size: 60px;
-    }
-    #players {
-        padding: 40px;
-    }
-    article {
-        width: 250px;
-        height: 250px;
-        margin: 30px;
-        font-size: 20px;
-    }
-    #enemy, #selected {
-        width: 200px;
-        height: 200px;
-    }
-    #ResultsScreen {
-        font-size: 60px;
-    }
-    #ResultsScreen img {
-        width: 200px;
-        height: 200px;
-    }
-    #actions--fire,
-    #actions--water,
-    #actions--plant,
-    #actions--heal {
-        width: 120px;
-        height: 120px;
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 800px) {
-    body {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 36px;
-    }
-    #ChooseChar {
-        flex-direction: column;
-        gap: 20px;
-    }
-    article {
-        width: 180px;
-        height: 180px;
-        margin: 10px;
-        font-size: 16px;
-    }
-    #CombatScreen {
-        grid-template-rows: 2fr 1fr;
-    }
-    #players {
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px;
-    }
-    #enemy, #selected {
-        width: 120px;
-        height: 120px;
-    }
-    #vs p {
-        font-size: 28px;
-    }
-    #actions {
-        gap: 10px;
-    }
-    #actions--fire,
-    #actions--water,
-    #actions--plant,
-    #actions--heal {
-        width: 70px;
-        height: 70px;
-        font-size: 14px;
-        border-radius: 20px;
-    }
-    #ResultsScreen {
-        font-size: 30px;
-    }
-    #ResultsScreen img {
-        width: 80px;
-        height: 80px;
-    }
-    #restart {
-        font-size: 16px;
-        padding: 6px 12px;
-    }
-}
-
-@media (max-width: 500px) {
-    h1 {
-        font-size: 22px;
-    }
-    #ChooseChar {
-        gap: 10px;
-    }
-    article {
-        width: 110px;
-        height: 110px;
-        font-size: 10px;
-        margin: 5px;
-        border-radius: 20px;
-    }
-    article img {
-        width: 60px;
-    }
-    #enemy, #selected {
-        width: 60px;
-        height: 60px;
-    }
-    #vs p {
-        font-size: 16px;
-    }
-    #actions--fire,
-    #actions--water,
-    #actions--plant,
-    #actions--heal {
-        width: 40px;
-        height: 40px;
-        font-size: 8px;
-        border-radius: 10px;
-    }
-    #ResultsScreen {
-        font-size: 16px;
-    }
-    #ResultsScreen img {
-        width: 40px;
-        height: 40px;
-    }
-    #restart {
-        font-size: 10px;
-        padding: 3px 6px;
-    }
-}
-
 #restart {
-    padding: 10px 20px;
-    background: #313131;
-    box-shadow: 0 0 15px #424242;
-    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 30px;
+    border: none;
+    border-radius: 12px;
+    background: var(--heal-bg);
+    color: var(--white);
+    box-shadow: 0 0 20px var(--white);
     cursor: pointer;
-    font-size: 24px;
+    transition: all .3s ease;
 }
 
 #restart:hover {
-    background: #9e9e9e;
-    box-shadow: 0 0 15px #ffffff;
-    color: var(--white);
-    scale: 1.1;
+    box-shadow: 0 0 30px var(--white);
+    scale: 1.05;
 }
 
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%       { transform: translateX(-8px); }
+    75%       { transform: translateX(8px); }
+}
+
+.shake {
+    animation: shake 0.3s ease;
+}
