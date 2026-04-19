@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <title>Your Essence | Santiago Gallardo</title>
+  <link rel="icon" href="./assets/icon.webp" type="image/png">
+</head>
+
+<body>
+  <main class="page">
+    <section id="yourEssence">
+      <header class="hero">
+        <h1 id="name">NAME</h1>
+        <div id="info">
+          <p id="age">AGE</p>
+          <p id="zodiac">ZODIAC</p>
+        </div>
+      </header>
+
+      <article class="board">
+        <ul>
+          <li id="mbti"><img src="" alt="MBTI"><span>MBTI</span></li>
+          <li id="food"><img src="" alt="Comida"><span>FOOD</span></li>
+          <li id="character"><img src="" alt="Personaje"><span>CHARACTER</span></li>
+          <li id="color"><img src="" alt="Color"><span>COLOR</span></li>
+          <li id="place"><img src="" alt="Lugar"><span>PLACE</span></li>
+          <li id="season"><img src="" alt="Estacion del año"><span>SEASON</span></li>
+          <li id="hobby"><img src="" alt="Pasatiempo"><span>HOBBY</span></li>
+          <li id="music"><img src="" alt="Musica"><span>MUSIC</span></li>
+          <li id="career"><img src="" alt="Profesion"><span>CAREER</span></li>
+          <li id="flower"><img src="" alt="Flor"><span>FLOWER</span></li>
+          <li id="animal"><img src="" alt="Animal"><span>ANIMAL</span></li>
+          <li id="app"><img src="" alt="App"><span>APP</span></li>
+          <li id="you"><img src="" alt="Tu foto"><span>YOU</span></li>
+        </ul>
+      </article>
+
+      <div class="startWrap">
+        <a class="startBtn" role="button" href="#Form">START</a>
+      </div>
+    </section>
+
+    <section id="Form" class="surface">
+      <header class="formHeader">
+        <h2>Complete Your Style</h2>
+        <p>Upload your images and generate your visual panel.</p>
+      </header>
+
+      <form onsubmit="valid(event)" novalidate>
+        <div class="field">
+          <label for="i-name">Your Name</label>
+          <input type="text" name="name" id="i-name" placeholder="Enter your name" required>
+          <span id="i-name-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="i-age">Your Birth Date</label>
+          <input type="date" id="i-age" name="age" required>
+          <span id="i-age-error"></span>
+        </div>
+
+        <div class="field"><label for="i-mbti">MBTI</label><input type="file" id="i-mbti" name="mbti"><span
+            id="i-mbti-error"></span></div>
+        <div class="field"><label for="i-food">FOOD</label><input type="file" id="i-food" name="food"><span
+            id="i-food-error"></span></div>
+        <div class="field"><label for="i-character">CHARACTER</label><input type="file" id="i-character"
+            name="character"><span id="i-character-error"></span></div>
+        <div class="field"><label for="i-color">COLOR</label><input type="file" id="i-color" name="color"><span
+            id="i-color-error"></span></div>
+        <div class="field"><label for="i-place">PLACE</label><input type="file" id="i-place" name="place"><span
+            id="i-place-error"></span></div>
+        <div class="field"><label for="i-season">SEASON</label><input type="file" id="i-season"
+            name="season"><span id="i-season-error"></span></div>
+        <div class="field"><label for="i-hobby">HOBBY</label><input type="file" id="i-hobby" name="hobby"><span
+            id="i-hobby-error"></span></div>
+        <div class="field"><label for="i-music">MUSIC</label><input type="file" id="i-music" name="music"><span
+            id="i-music-error"></span></div>
+        <div class="field"><label for="i-career">CAREER</label><input type="file" id="i-career"
+            name="career"><span id="i-career-error"></span></div>
+        <div class="field"><label for="i-flower">FLOWER</label><input type="file" id="i-flower" name="flower"><span
+            id="i-flower-error"></span></div>
+        <div class="field"><label for="i-animal">ANIMAL</label><input type="file" id="i-animal" name="animal"><span
+            id="i-animal-error"></span></div>
+        <div class="field"><label for="i-app">APP</label><input type="file" id="i-app" name="app"><span
+            id="i-app-error"></span></div>
+        <div class="field"><label for="i-you">YOU</label><input type="file" id="i-you" name="you"><span
+            id="i-you-error"></span></div>
+
+        <div class="keypad">
+          <button type="reset">Limpiar</button>
+          <button type="submit">Crear</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
