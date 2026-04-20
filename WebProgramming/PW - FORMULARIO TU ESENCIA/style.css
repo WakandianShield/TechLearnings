@@ -37,19 +37,6 @@ body {
   background: linear-gradient(90deg, var(--bg-0), var(--bg-1));
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.14;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), transparent 85%);
-}
-
 .page {
   width: min(74rem, calc(100% - 2rem));
   margin: 1.2rem auto 2.3rem;
