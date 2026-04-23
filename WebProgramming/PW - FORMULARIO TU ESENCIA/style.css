@@ -80,17 +80,18 @@ body {
 
 #info {
   display: grid;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 2.0rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 0.65rem;
 }
 
 #yourEssence>#info>p {
   margin: 0;
+  padding: 0.36rem 0.6rem;
   border-radius: 999px;
   border: 1px solid var(--stroke);
   background: rgba(31, 31, 31, 0.74);
   color: var(--ink-soft);
-  font-size: 0.9rem;
+  font-size: 0.76rem;
 }
 
 #yourEssence>article {
@@ -121,6 +122,10 @@ body {
 #yourEssence>article>ul>li#you {
   grid-column: 2 / span 2;
   grid-row: 2 / span 2;
+}
+
+#yourEssence>article>ul>li#color {
+  cursor: pointer;
 }
 
 #yourEssence>article>ul>li:hover {
@@ -271,13 +276,17 @@ body {
 
 #Form>form>div.field input[type="text"],
 #Form>form>div.field input[type="date"],
-#Form>form>div.field input[type="file"] {
+#Form>form>div.field input[type="file"],
+#Form>form>div.field select,
+#Form>form>div.field input[type="color"],
+#Form>form>div.field input[type="range"] {
   width: 100%;
   margin: 0;
 }
 
 #Form>form>div.field input[type="text"],
-#Form>form>div.field input[type="date"] {
+#Form>form>div.field input[type="date"],
+#Form>form>div.field select {
   height: 2.25rem;
   border: 1px solid var(--stroke);
   border-radius: 0.6rem;
@@ -287,6 +296,14 @@ body {
   padding: 0 0.72rem;
   font-family: inherit;
   font-size: 0.94rem;
+}
+
+#Form>form>div.field input[type="color"] {
+  height: 2.25rem;
+  border: 1px solid var(--stroke);
+  border-radius: 0.6rem;
+  background: transparent;
+  padding: 0.15rem;
 }
 
 #Form>form>div.field input[type="date"], 
@@ -324,6 +341,46 @@ body {
   display: none;
 }
 
+#Form>form>div.field select {
+  text-align: center;
+  text-align-last: center;
+  color-scheme: dark;
+}
+
+#i-pronoun {
+  background: #111111;
+  color: #f2f2f2;
+}
+
+#i-pronoun option {
+  background: #111111;
+  color: #f2f2f2;
+}
+
+#Form>form>div.field input[type="range"] {
+  accent-color: var(--teal-500);
+}
+
+#i-favorite-color-value,
+#i-height-value {
+  display: block;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
+.inlineChoice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+}
+
+.inlineChoice input {
+  margin: 0;
+}
 
 
 #Form>form>div.field input[type="file"]::file-selector-button {
@@ -377,12 +434,18 @@ body {
 }
 
 .keypad>button[type="reset"] {
+  background: linear-gradient(120deg, var(--teal-500), var(--teal-600));
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(21, 169, 134, 0.7);
+}
+
+.keypad>button[type="submit"] {
   background: linear-gradient(120deg, var(--blue-500), var(--blue-600));
   color: #ffffff;
   box-shadow: 0 0 20px rgb(0, 153, 255);
 }
 
-.keypad>button[type="submit"] {
+.keypad>button#download-grid {
   background: linear-gradient(120deg, var(--purple-500), var(--purple-600));
   color: #ffffff;
   box-shadow: 0 0 20px rgb(108, 102, 187);
@@ -391,4 +454,33 @@ body {
 .keypad>button:hover,
 .keypad>button:focus-visible {
   transform: scale(1.03);
+}
+
+#yourEssence.is-exporting .startWrap {
+  display: none;
+}
+
+#yourEssence.is-exporting {
+  padding-bottom: 2.2rem;
+}
+
+@media (max-width: 900px) {
+  #Form>form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #info {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #Form>form {
+    grid-template-columns: 1fr;
+  }
+
+  #info {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
 }

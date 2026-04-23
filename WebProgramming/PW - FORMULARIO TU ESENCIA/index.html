@@ -21,25 +21,28 @@
         <h1 id="name">NAME</h1>
         <div id="info">
           <p id="age">AGE</p>
+          <p id="pronoun">PRONOUN</p>
           <p id="zodiac">ZODIAC</p>
+          <p id="favorite-color-info">PREFERRED COLOR</p>
+          <p id="height-info">HEIGHT</p>
         </div>
       </header>
 
       <article class="board">
         <ul>
           <li id="mbti"><img src="" alt="MBTI"><span>MBTI</span></li>
-          <li id="food"><img src="" alt="Comida"><span>FOOD</span></li>
-          <li id="character"><img src="" alt="Personaje"><span>CHARACTER</span></li>
+          <li id="food"><img src="" alt="Food"><span>FOOD</span></li>
+          <li id="character"><img src="" alt="Character"><span>CHARACTER</span></li>
           <li id="color"><img src="" alt="Color"><span>COLOR</span></li>
-          <li id="place"><img src="" alt="Lugar"><span>PLACE</span></li>
-          <li id="season"><img src="" alt="Estacion del año"><span>SEASON</span></li>
-          <li id="hobby"><img src="" alt="Pasatiempo"><span>HOBBY</span></li>
-          <li id="music"><img src="" alt="Musica"><span>MUSIC</span></li>
-          <li id="career"><img src="" alt="Profesion"><span>CAREER</span></li>
-          <li id="flower"><img src="" alt="Flor"><span>FLOWER</span></li>
+          <li id="place"><img src="" alt="Place"><span>PLACE</span></li>
+          <li id="season"><img src="" alt="Season"><span>SEASON</span></li>
+          <li id="hobby"><img src="" alt="Hobby"><span>HOBBY</span></li>
+          <li id="music"><img src="" alt="Music"><span>MUSIC</span></li>
+          <li id="career"><img src="" alt="Career"><span>CAREER</span></li>
+          <li id="flower"><img src="" alt="Flower"><span>FLOWER</span></li>
           <li id="animal"><img src="" alt="Animal"><span>ANIMAL</span></li>
           <li id="app"><img src="" alt="App"><span>APP</span></li>
-          <li id="you"><img src="" alt="Tu foto"><span>YOU</span></li>
+          <li id="you"><img src="" alt="Your photo"><span>YOU</span></li>
         </ul>
       </article>
 
@@ -65,6 +68,31 @@
           <label for="i-age">Your Birth Date</label>
           <input type="date" id="i-age" name="age" required>
           <span id="i-age-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="i-pronoun">Pronoun</label>
+          <select id="i-pronoun" name="pronoun" required>
+            <option value="">Select your pronoun</option>
+            <option value="HE">He</option>
+            <option value="SHE">She</option>
+            <option value="THEY">They</option>
+          </select>
+          <span id="i-pronoun-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="i-favorite-color">Preferred Color</label>
+          <input type="color" id="i-favorite-color" name="favoriteColor" value="#ffffff" required>
+          <small id="i-favorite-color-value">#FFFFFF</small>
+          <span id="i-favorite-color-error"></span>
+        </div>
+
+        <div class="field">
+          <label for="i-height">Height (cm)</label>
+          <input type="range" id="i-height" name="height" min="120" max="220" value="170" step="1">
+          <small id="i-height-value">170 cm</small>
+          <span id="i-height-error"></span>
         </div>
 
         <div class="field"><label for="i-mbti">MBTI</label><input type="file" id="i-mbti" name="mbti"><span
@@ -95,13 +123,15 @@
             id="i-you-error"></span></div>
 
         <div class="keypad">
-          <button type="reset">Limpiar</button>
-          <button type="submit">Crear</button>
+          <button type="reset">Reset</button>
+          <button type="submit">Create</button>
+          <button type="button" id="download-grid">Download</button>
         </div>
       </form>
     </section>
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="./index.js"></script>
 </body>
 
