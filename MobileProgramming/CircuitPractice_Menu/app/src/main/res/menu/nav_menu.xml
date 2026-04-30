@@ -4,9 +4,6 @@
         android:id="@+id/menu_calculator"
         android:title="Calculadora" />
     <item
-        android:id="@+id/menu_results"
-        android:title="Resultados" />
-    <item
         android:id="@+id/menu_creator"
         android:title="Creador" />
     <item

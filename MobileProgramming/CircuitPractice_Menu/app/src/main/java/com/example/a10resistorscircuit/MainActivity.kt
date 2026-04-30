@@ -83,21 +83,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.menu_calculator -> true
-            R.id.menu_results -> {
-                startActivity(Intent(this, MainActivity2::class.java))
-                true
-            }
-            R.id.menu_creator -> {
-                startActivity(Intent(this, CreatorActivity::class.java))
-                true
-            }
-            R.id.menu_contact -> {
-                startActivity(Intent(this, ContactActivity::class.java))
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+        val id = item.itemId
+        if (id == R.id.menu_calculator) {
+            return true
+        } else if (id == R.id.menu_creator) {
+            startActivity(Intent(this, CreatorActivity::class.java))
+            return true
+        } else if (id == R.id.menu_contact) {
+            startActivity(Intent(this, ContactActivity::class.java))
+            return true
         }
+        return super.onOptionsItemSelected(item)
     }
 }
