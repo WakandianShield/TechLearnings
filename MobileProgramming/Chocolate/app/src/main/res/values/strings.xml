@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">chocolate</string>
+
+    <string-array name="presentaciones">
+        <item>Tableta</item>
+        <item>Bombón</item>
+        <item>Trufa</item>
+        <item>Polvo</item>
+    </string-array>
+
+    <string-array name="tipos_cacao">
+        <item>Criollo</item>
+        <item>Forastero</item>
+        <item>Trinitario</item>
+    </string-array>
+
+    <string-array name="perfiles_sabor">
+        <item>Amargo</item>
+        <item>Dulce</item>
+        <item>Frutal</item>
+        <item>Cítrico</item>
+    </string-array>
+
+    <string-array name="tipos">
+        <item>Oscuro</item>
+        <item>Con leche</item>
+        <item>Blanco</item>
+    </string-array>
+
+    <string-array name="pesos">
+        <item>50g</item>
+        <item>100g</item>
+        <item>200g</item>
+        <item>500g</item>
+    </string-array>
+</resources>
