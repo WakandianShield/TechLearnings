@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.menu_calculator) {
+            Toast.makeText(this, "ya estas en esta pantalla", Toast.LENGTH_SHORT).show()
             return true
         } else if (id == R.id.menu_creator) {
             startActivity(Intent(this, CreatorActivity::class.java))

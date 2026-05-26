@@ -73,7 +73,7 @@
             android:padding="8dp"
             android:text="..."
             android:textColor="#444444"
-            android:textSize="10sp"
+            android:textSize="7sp"
             android:typeface="monospace"
             android:scrollbars="vertical" />
 

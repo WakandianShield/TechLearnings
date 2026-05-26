@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F7"
+    tools:context=".TarjetaActivity">
+
+    <include
+        layout="@layout/layout_toolbar"
+        android:id="@+id/toolbar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="350dp"
+        android:layout_height="480dp"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_layout"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivChocolate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/card" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:text="Nombre"
+                    android:textColor="#1D1D1F"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvMarca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:text="Marca"
+                    android:textColor="#1D1D1F"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvPais"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:paddingVertical="2dp"
+                    android:text="País"
+                    android:textColor="#1D1D1F"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvPorcentaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:paddingVertical="2dp"
+                    android:text="Porcentaje"
+                    android:textColor="#1D1D1F"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvPresentacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:paddingVertical="2dp"
+                    android:text="Presentación"
+                    android:textColor="#1D1D1F"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvTipoCacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:paddingVertical="2dp"
+                    android:text="Tipo Cacao"
+                    android:textColor="#1D1D1F"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:paddingVertical="2dp"
+                    android:text="Perfil"
+                    android:textColor="#1D1D1F"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvTipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:paddingVertical="2dp"
+                    android:text="Tipo"
+                    android:textColor="#1D1D1F"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvPeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:paddingVertical="2dp"
+                    android:text="Peso"
+                    android:textColor="#1D1D1F"
+                    android:textSize="15sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/mon"
+                    android:gravity="center"
+                    android:text="Teléfono"
+                    android:textColor="#1D1D1F"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnLlamar"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:backgroundTint="#1D1D1F"
+                    android:fontFamily="@font/mon"
+                    android:text="Llamar"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:icon="@android:drawable/sym_action_call"
+                    app:iconGravity="textStart"
+                    app:iconPadding="12dp"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/white" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#86868B"
+        android:fontFamily="@font/mon"
+        android:text="Regresar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

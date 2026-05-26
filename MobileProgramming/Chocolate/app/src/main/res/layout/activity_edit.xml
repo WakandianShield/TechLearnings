@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F7">
+    android:background="#F5F5F7"
+    tools:context=".EditActivity">
 
     <include
         layout="@layout/layout_toolbar"
@@ -17,7 +18,7 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llButtons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar_layout">
@@ -41,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mon"
-                android:text="Completa la información"
+                android:text="Modifica la información"
                 android:textColor="#86868B"
                 android:textSize="13sp"
                 android:layout_marginBottom="16dp" />
@@ -339,18 +340,50 @@
                 android:background="@drawable/bg_edittext"
                 android:layout_marginBottom="16dp" />
 
-            <Button
-                android:id="@+id/btnGuardar"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:backgroundTint="#1D1D1F"
-                android:fontFamily="@font/mon"
-                android:text="Guardar Chocolate"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnAnterior"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Anterior"
+            android:textAllCaps="false"
+            android:fontFamily="@font/mon"
+            android:backgroundTint="#86868B"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Guardar Cambios"
+            android:textAllCaps="false"
+            android:fontFamily="@font/mon"
+            android:backgroundTint="#1D1D1F" />
+
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="Siguiente"
+            android:textAllCaps="false"
+            android:fontFamily="@font/mon"
+            android:backgroundTint="#86868B"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

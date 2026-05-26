@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Opciones de Administrador -->
+    <item
+        android:id="@+id/menu_eliminar"
+        android:title="Eliminar Registro"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:iconTint="@color/white"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_crear"
+        android:title="Crear Registro"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_modificar"
+        android:title="Modificar Registro"
+        app:showAsAction="never" />
+
+    <!-- Opciones de Ambos (Admin y Empleado) -->
+    <item
+        android:id="@+id/menu_ver"
+        android:title="Ver Lista"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_contacto"
+        android:title="Contacto"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_creador"
+        android:title="Creador"
+        app:showAsAction="never" />
+
+    <!-- Opción de Salida -->
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Cerrar Sesión"
+        android:icon="@android:drawable/ic_lock_power_off"
+        app:iconTint="@color/white"
+        app:showAsAction="always" />
+</menu>

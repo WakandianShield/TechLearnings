@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -45,6 +46,7 @@ class ContactActivity : AppCompatActivity() {
             startActivity(intent)
             return true
         } else if (id == R.id.menu_contact) {
+            Toast.makeText(this, "ya estas en esta pantalla", Toast.LENGTH_SHORT).show()
             return true
         }
         return super.onOptionsItemSelected(item)

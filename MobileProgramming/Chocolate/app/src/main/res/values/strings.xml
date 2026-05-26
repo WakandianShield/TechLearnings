@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">chocolate</string>
+    <string name="ver_lista">Ver Lista</string>
+    <string name="guardar_chocolate">Guardar Chocolate</string>
+    <string name="modificar_registros">Modificar Registros</string>
+    <string name="eliminar_registros">Eliminar Registros</string>
+    <string name="crear_registro">Crear Registro</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="anterior">Anterior</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="guardar_cambios">Guardar Cambios</string>
+    <string name="nombre">Nombre</string>
+    <string name="marca">Marca</string>
+    <string name="porcentaje_cacao">% Cacao</string>
+    <string name="pais_origen">País Origen</string>
+    <string name="contacto">Contacto</string>
+    <string name="presentacion">Presentación</string>
+    <string name="tipo_cacao">Tipo Cacao</string>
+    <string name="perfil_sabor">Perfil Sabor</string>
+    <string name="tipo">Tipo</string>
+    <string name="peso">Peso</string>
+    <string name="chocolate_title">Chocolate</string>
+    <string name="completa_info">Completa la información</string>
+    <string name="modifica_info">Modifica la información</string>
+    <string name="login_title">Login</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="toca_detalles">Toca para ver detalles</string>
 
     <string-array name="presentaciones">
         <item>Tableta</item>
