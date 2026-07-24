@@ -1,0 +1,6 @@
+TEST_START: 07_color_response_test
+  RED  X=1405 Y=1744 Z=291
+  GRN  X=863 Y=4158 Z=348
+  BLU  X=1349 Y=2131 Z=3764
+  WHT  X=2419 Y=6910 Z=3827
+TEST_PASS: 07_color_response_test
