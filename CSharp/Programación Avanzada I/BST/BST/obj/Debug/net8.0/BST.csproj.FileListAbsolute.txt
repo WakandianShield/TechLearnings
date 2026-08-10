@@ -1,0 +1,14 @@
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\BST.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\BST.AssemblyInfoInputs.cache
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\BST.AssemblyInfo.cs
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\BST.csproj.CoreCompileInputs.cache
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\bin\Debug\net8.0\BST.exe
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\bin\Debug\net8.0\BST.deps.json
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\bin\Debug\net8.0\BST.runtimeconfig.json
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\bin\Debug\net8.0\BST.dll
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\bin\Debug\net8.0\BST.pdb
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\BST.dll
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\refint\BST.dll
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\BST.pdb
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\BST.genruntimeconfig.cache
+C:\Users\santi\OneDrive\Documentos\Programacion Avanzada I\BST\BST\obj\Debug\net8.0\ref\BST.dll
