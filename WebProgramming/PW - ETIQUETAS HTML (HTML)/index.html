@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ejemplo de clasificación de etiquetas HTML" />
+    <meta name="author" content="Santiago Gallardo"/>
+    <title>Clasificación de etiquetas HTML</title>
+</head>
+
+<body>
+    <!-- 1. ESTRUCTURA DEL DOCUMENTO (LAYOUT) -->
+
+    <header>
+        <h1>Clasificación de Etiquetas HTML</h1>
+        <p>Ejemplo práctico usando únicamente HTML</p>
+    </header>
+
+    <nav>
+        <a href="#texto">Contenido Textual</a> | <a href="#listas">Listas</a> |
+        <a href="#multimedia">Multimedia</a> | <a href="#tablas">Tablas</a> |
+        <a href="#formularios">Formularios</a> |
+        <a href="#enlaces">Enlaces</a> | <a href="#contenedores">Contenedores</a>
+    </nav>
+
+    <main>
+        <section id="texto">
+            <h2>2. Contenido Textual</h2>
+
+            <!-- 2. CONTENIDO TEXTUAL -->
+
+            <p>
+                Este es un párrafo con texto en <strong>negritas</strong>, <em>cursiva</em>, <small>texto pequeño</small>, <u>subrayado</u> y
+                <mark>resaltado</mark>.
+            </p>
+            <blockquote>
+                "HTML es el lenguaje estándar para crear páginas web."
+            </blockquote>
+            <pre>
+                Texto preformateado
+                Mantiene espacios
+                    y saltos de línea
+            </pre>
+        </section>
+
+        <section id="listas">
+            <h2>3. Listas</h2>
+
+            <!-- 3. LISTAS -->
+
+            <h3>Lista desordenada</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <h3>Lista ordenada</h3>
+            <ol>
+                <li>Analizar</li>
+                <li>Diseñar</li>
+                <li>Programar</li>
+            </ol>
+
+            <h3>Lista de definición</h3>
+            <dl>
+                <dt>HTML</dt>
+                <dd>Lenguaje de marcado para la web</dd>
+            </dl>
+        </section>
+
+        <section id="multimedia">
+            <h2>4. Contenido Multimedia</h2>
+
+            <!-- 4. CONTENIDO MULTIMEDIA -->
+
+            <h3>Imagen</h3>
+            <img src="https://pbs.twimg.com/profile_images/699984147956289536/CjPw79mo_400x400.jpg" alt="Imagen de los Beatles" />
+
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg" />
+                Tu navegador no soporta audio.
+            </audio>
+
+            <h3>Video</h3>
+            <video width="320" height="240" controls>
+                <source src="video.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+            </video>
+        </section>
+
+        <section id="tablas">
+            <h2>5. Tablas</h2>
+
+            <!-- 5. TABLAS -->
+
+            <table border="1">
+                <caption>
+                    Ejemplo de Tabla
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Santiago</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Enrique</td>
+                        <td>67</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="formularios">
+            <h2>6. Formularios</h2>
+
+            <!-- 6. FORMULARIOS -->
+
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" /><br /><br />
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" /><br /><br />
+
+                <label>Género:</label><br />
+                <input type="radio" name="genero" value="masculino" /> Masculino<br />
+                <input type="radio" name="genero" value="femenino" />
+                Femenino<br /><br />
+
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="mexico">México</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="argentina">Argentina</option>
+                </select><br /><br />
+
+                <textarea rows="4" cols="30" placeholder="Escribe un comentario"></textarea><br /><br />
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- 7. ENLACES Y NAVEGACIÓN -->
+
+        <section id="enlaces">
+            <h2>7. Enlaces y Navegación</h2>
+            <a href="https://www.google.com" target="_blank">Ir a Google</a><br />
+            <a href="#top">Volver al inicio</a>
+        </section>
+
+        <!-- 8. CONTENEDORES GENÉRICOS -->
+
+        <section id="contenedores">
+            <h2>8. Contenedores Genéricos (No semánticos)</h2>
+
+            <div>
+                Este es un contenedor DIV.
+                <span>Este es un contenedor SPAN en línea.</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Pie de pagina</p>
+    </footer>
+</body>
+
+</html>
