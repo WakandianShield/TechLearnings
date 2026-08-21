@@ -1,0 +1,73 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    background: #2c2c2c;
+    color: #f3f4f6;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px 32px;
+    border-bottom: 1px solid #444;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f3f4f6;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand-mark {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border-radius: 30px;
+    background: #d0d0d0;
+    color: #111;
+    font-size: 1.25rem;
+}
+
+.brand-dot { color: #aaa; }
+
+nav { display: flex; gap: 30px; }
+
+nav a {
+    position: relative;
+    padding: 8px 0;
+    color: #aaa;
+    font-size: .88rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: #aaa;
+    content: '';
+    transform: scaleX(0);
+    transition: transform .2s ease;
+}
+
+nav a:hover, nav a.active { color: #f3f4f6; }
+nav a:hover::after, nav a.active::after { transform: scaleX(1); }
+
+@media (max-width: 600px) {
+    .site-header { padding: 18px 20px; }
+    nav { gap: 16px; }
+}
