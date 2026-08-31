@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframes - The Beatles SPA</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+      color: #555;
+    }
+
+    .wireframe {
+      width: 800px;
+      margin: 0 auto 50px auto;
+      background: #fff;
+      border: 2px dashed #999;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .wireframe-title {
+      background: #333;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #e0e0e0;
+      border-bottom: 2px solid #ccc;
+      padding: 10px 20px;
+      height: 50px;
+    }
+
+    .navbar .links { display: flex; gap: 20px; }
+    .navbar .links span {
+      background: #bbb;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .navbar .logo {
+      width: 40px;
+      height: 40px;
+      background: #999;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #fff;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #e0e0e0;
+      border-top: 2px solid #ccc;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .footer-col {
+      flex: 1;
+    }
+
+    .footer-col .label {
+      font-size: 10px;
+      font-weight: bold;
+      color: #888;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .footer-col .line {
+      height: 8px;
+      background: #ccc;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    .footer-col .line.short { width: 60%; }
+    .footer-col .line.medium { width: 80%; }
+
+    .footer-copyright {
+      text-align: center;
+      font-size: 9px;
+      color: #aaa;
+      padding: 6px;
+      border-top: 1px solid #ddd;
+    }
+
+    /* CONTENIDO */
+    .content { padding: 20px; min-height: 300px; }
+
+    /* PLACEHOLDERS */
+    .placeholder {
+      background: #ddd;
+      border: 1px dashed #aaa;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .placeholder.img {
+      background: #c8d8e8;
+      border-color: #a0b8d0;
+      color: #607080;
+    }
+
+    .placeholder.text {
+      background: #f5f5f5;
+      border-color: #ccc;
+      color: #999;
+      font-weight: normal;
+      font-size: 11px;
+      padding: 8px;
+      text-align: center;
+    }
+
+    /* INICIO */
+    .inicio-logo {
+      width: 200px;
+      height: 120px;
+      margin: 80px auto;
+      background: #c8d8e8;
+      border: 2px dashed #a0b8d0;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #607080;
+    }
+
+    /* ALBUMES GRID */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .card-album {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .card-album .img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      background: #c8d8e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #607080;
+    }
+
+    .card-album .info {
+      padding: 8px;
+      background: #f9f9f9;
+    }
+
+    .card-album .info .title {
+      height: 8px;
+      background: #bbb;
+      border-radius: 4px;
+      margin-bottom: 4px;
+    }
+
+    .card-album .info .subtitle {
+      height: 6px;
+      background: #ddd;
+      border-radius: 4px;
+      width: 70%;
+    }
+
+    /* FRASES GRID */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .card-frase {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      background: #f9f9f9;
+    }
+
+    .card-frase .quote-icon {
+      font-size: 24px;
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+
+    .card-frase .frase-text {
+      height: 30px;
+      background: #ddd;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .card-frase .frase-author {
+      height: 6px;
+      background: #bbb;
+      border-radius: 4px;
+      width: 50%;
+    }
+
+    /* MIEMBROS */
+    .grid-4-miembros {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .card-miembro {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .card-miembro .number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+
+    .card-miembro .name {
+      height: 10px;
+      background: #bbb;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+
+    .card-miembro .dates {
+      height: 6px;
+      background: #ddd;
+      border-radius: 4px;
+      width: 60%;
+      margin: 0 auto 8px auto;
+    }
+
+    .card-miembro .desc {
+      height: 40px;
+      background: #eee;
+      border-radius: 4px;
+    }
+
+    /* HISTORIA */
+    .grid-3-historia {
+      display: grid;
+      grid-template-columns: 1fr 280px 1fr;
+      gap: 12px;
+    }
+
+    .historia-col {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      background: #f9f9f9;
+    }
+
+    .historia-col .heading {
+      height: 10px;
+      background: #bbb;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      width: 60%;
+    }
+
+    .historia-col .paragraph {
+      height: 6px;
+      background: #ddd;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+
+    .historia-col .paragraph.short { width: 80%; }
+    .historia-col .paragraph.shorter { width: 60%; }
+
+    .historia-quote {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .historia-quote .big-quote {
+      font-size: 48px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .historia-quote .quote-text {
+      height: 8px;
+      background: #bbb;
+      border-radius: 4px;
+      width: 80%;
+      margin-bottom: 6px;
+    }
+
+    .historia-quote .quote-author {
+      height: 6px;
+      background: #ddd;
+      border-radius: 4px;
+      width: 40%;
+    }
+
+    .separator {
+      border: none;
+      border-top: 1px dashed #ccc;
+      margin: 40px auto;
+      width: 800px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WIREFRAMES - The Beatles SPA (Angular)</h1>
+
+  <!-- ==================== INICIO ==================== -->
+  <div class="wireframe">
+    <div class="wireframe-title">PANTALLA 1: INICIO (/)</div>
+    <div class="navbar">
+      <div class="links">
+        <span>Frases</span>
+        <span>Miembros</span>
+      </div>
+      <div class="logo">LOGO</div>
+      <div class="links">
+        <span>Albumes</span>
+        <span>Historia</span>
+      </div>
+    </div>
+    <div class="content" style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
+      <div class="inicio-logo">The Beatles</div>
+    </div>
+    <div class="footer">
+      <div class="footer-col">
+        <div class="label">Logo</div>
+        <div class="placeholder" style="height: 40px; width: 40px; border-radius: 50%;">B</div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Albumes</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line short"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Secciones</div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Copyright</div>
+        <div class="line short"></div>
+      </div>
+    </div>
+    <div class="footer-copyright">2026 SPA The Beatles. Santiago Gallardo Ruvalcaba (23300748) - 7A1</div>
+  </div>
+
+  <hr class="separator">
+
+  <!-- ==================== ALBUMES ==================== -->
+  <div class="wireframe">
+    <div class="wireframe-title">PANTALLA 2: ALBUMES (/albumes)</div>
+    <div class="navbar">
+      <div class="links">
+        <span>Frases</span>
+        <span>Miembros</span>
+      </div>
+      <div class="logo">LOGO</div>
+      <div class="links">
+        <span>Albumes</span>
+        <span>Historia</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="grid-4">
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+        <div class="card-album"><div class="img">IMG</div><div class="info"><div class="title"></div><div class="subtitle"></div></div></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-col">
+        <div class="label">Logo</div>
+        <div class="placeholder" style="height: 40px; width: 40px; border-radius: 50%;">B</div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Albumes</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line short"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Secciones</div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Copyright</div>
+        <div class="line short"></div>
+      </div>
+    </div>
+    <div class="footer-copyright">2026 SPA The Beatles. Santiago Gallardo Ruvalcaba (23300748) - 7A1</div>
+  </div>
+
+  <hr class="separator">
+
+  <!-- ==================== FRASES ==================== -->
+  <div class="wireframe">
+    <div class="wireframe-title">PANTALLA 3: FRASES (/frases)</div>
+    <div class="navbar">
+      <div class="links">
+        <span>Frases</span>
+        <span>Miembros</span>
+      </div>
+      <div class="logo">LOGO</div>
+      <div class="links">
+        <span>Albumes</span>
+        <span>Historia</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="grid-3">
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+        <div class="card-frase"><div class="quote-icon">"</div><div class="frase-text"></div><div class="frase-author"></div></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-col">
+        <div class="label">Logo</div>
+        <div class="placeholder" style="height: 40px; width: 40px; border-radius: 50%;">B</div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Albumes</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line short"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Secciones</div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Copyright</div>
+        <div class="line short"></div>
+      </div>
+    </div>
+    <div class="footer-copyright">2026 SPA The Beatles. Santiago Gallardo Ruvalcaba (23300748) - 7A1</div>
+  </div>
+
+  <hr class="separator">
+
+  <!-- ==================== MIEMBROS ==================== -->
+  <div class="wireframe">
+    <div class="wireframe-title">PANTALLA 4: MIEMBROS (/miembros)</div>
+    <div class="navbar">
+      <div class="links">
+        <span>Frases</span>
+        <span>Miembros</span>
+      </div>
+      <div class="logo">LOGO</div>
+      <div class="links">
+        <span>Albumes</span>
+        <span>Historia</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="grid-4-miembros">
+        <div class="card-miembro">
+          <div class="number">01</div>
+          <div class="name"></div>
+          <div class="dates"></div>
+          <div class="desc"></div>
+        </div>
+        <div class="card-miembro">
+          <div class="number">02</div>
+          <div class="name"></div>
+          <div class="dates"></div>
+          <div class="desc"></div>
+        </div>
+        <div class="card-miembro">
+          <div class="number">03</div>
+          <div class="name"></div>
+          <div class="dates"></div>
+          <div class="desc"></div>
+        </div>
+        <div class="card-miembro">
+          <div class="number">04</div>
+          <div class="name"></div>
+          <div class="dates"></div>
+          <div class="desc"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-col">
+        <div class="label">Logo</div>
+        <div class="placeholder" style="height: 40px; width: 40px; border-radius: 50%;">B</div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Albumes</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line short"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Secciones</div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Copyright</div>
+        <div class="line short"></div>
+      </div>
+    </div>
+    <div class="footer-copyright">2026 SPA The Beatles. Santiago Gallardo Ruvalcaba (23300748) - 7A1</div>
+  </div>
+
+  <hr class="separator">
+
+  <!-- ==================== HISTORIA ==================== -->
+  <div class="wireframe">
+    <div class="wireframe-title">PANTALLA 5: HISTORIA (/historia)</div>
+    <div class="navbar">
+      <div class="links">
+        <span>Frases</span>
+        <span>Miembros</span>
+      </div>
+      <div class="logo">LOGO</div>
+      <div class="links">
+        <span>Albumes</span>
+        <span>Historia</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="grid-3-historia">
+        <div class="historia-col">
+          <div class="heading">Los Comienzos</div>
+          <div class="paragraph"></div>
+          <div class="paragraph short"></div>
+          <div class="paragraph"></div>
+          <div class="paragraph shorter"></div>
+          <div class="paragraph"></div>
+          <div class="paragraph short"></div>
+          <div class="paragraph"></div>
+        </div>
+        <div class="historia-col historia-quote">
+          <div class="big-quote">"</div>
+          <div class="quote-text"></div>
+          <div class="quote-text" style="width: 60%;"></div>
+          <div class="quote-author"></div>
+        </div>
+        <div class="historia-col">
+          <div class="heading">La Revolucion</div>
+          <div class="paragraph"></div>
+          <div class="paragraph short"></div>
+          <div class="paragraph"></div>
+          <div class="paragraph shorter"></div>
+          <div class="paragraph"></div>
+          <div class="paragraph short"></div>
+          <div class="paragraph"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-col">
+        <div class="label">Logo</div>
+        <div class="placeholder" style="height: 40px; width: 40px; border-radius: 50%;">B</div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Albumes</div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line short"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Secciones</div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="footer-col">
+        <div class="label">Copyright</div>
+        <div class="line short"></div>
+      </div>
+    </div>
+    <div class="footer-copyright">2026 SPA The Beatles. Santiago Gallardo Ruvalcaba (23300748) - 7A1</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_dark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrar_vehiculo"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <EditText
+        android:id="@+id/etPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/placa"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary"
+        android:backgroundTint="@color/white" />
+
+    <EditText
+        android:id="@+id/etMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/marca"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary"
+        android:backgroundTint="@color/white" />
+
+    <EditText
+        android:id="@+id/etAno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ano"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary"
+        android:backgroundTint="@color/white" />
+
+    <EditText
+        android:id="@+id/etModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/modelo"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary"
+        android:backgroundTint="@color/white" />
+
+    <EditText
+        android:id="@+id/etCosto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/costo_renta"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/text_secondary"
+        android:backgroundTint="@color/white" />
+
+    <CheckBox
+        android:id="@+id/cbDisponible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disponible"
+        android:textColor="@color/white"
+        android:checked="true"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnGuardarVehiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancelar"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:textColor="@color/white" />
+
+</LinearLayout>

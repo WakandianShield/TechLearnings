@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Sistema Vehicular</string>
+    <string name="menu_principal">SISTEMA DE VEHÍCULOS</string>
+
+    <string name="registrar_cliente">REGISTRAR CLIENTE</string>
+    <string name="identificacion">IDENTIFICACION</string>
+    <string name="nombre">NOMBRE</string>
+    <string name="telefono">TELEFONO</string>
+
+    <string name="registrar_vehiculo">REGISTRAR VEHÍCULO</string>
+    <string name="placa">PLACA</string>
+    <string name="marca">MARCA</string>
+    <string name="ano">AÑO</string>
+    <string name="modelo">MODELO</string>
+    <string name="costo_renta">COSTO DE RENTA POR DIA</string>
+    <string name="disponible">DISPONIBLE</string>
+
+    <string name="vehiculos">VEHÍCULOS</string>
+    <string name="todos">TODOS</string>
+    <string name="rentados">RENTADOS</string>
+
+    <string name="rentar_vehiculo">RENTAR VEHÍCULO</string>
+    <string name="seleccionar_cliente">SELECCIONAR CLIENTE</string>
+    <string name="dias_renta">DIAS DE RENTA</string>
+
+    <string name="devolucion_vehiculo">DEVOLUCIÓN VEHÍCULO</string>
+
+    <string name="guardar">GUARDAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="confirmar_renta">CONFIRMAR RENTA</string>
+    <string name="confirmar_devolucion">CONFIRMAR DEVOLUCIÓN</string>
+
+    <string name="nav_vehiculos">Vehículos</string>
+    <string name="nav_clientes">Clientes</string>
+    <string name="nav_consultar">Consultar</string>
+</resources>
