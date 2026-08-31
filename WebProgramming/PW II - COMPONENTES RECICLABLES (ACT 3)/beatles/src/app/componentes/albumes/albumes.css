@@ -1,0 +1,31 @@
+.gallery {
+  position: relative;
+  padding: 10rem 2rem;
+}
+
+.gallery-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 5rem auto;
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 800;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+app-imagen-card {
+  display: contents;
+}

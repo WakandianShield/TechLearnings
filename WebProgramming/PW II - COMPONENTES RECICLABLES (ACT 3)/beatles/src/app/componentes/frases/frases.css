@@ -1,0 +1,87 @@
+.quotes-section {
+  position: relative;
+  padding: 10rem 2rem;
+}
+
+.quotes-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 5rem auto;
+}
+
+.quotes-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 800;
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+.quote-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.quote-icon {
+  font-size: 4rem;
+  color: var(--accent);
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+  font-weight: 300;
+}
+
+.quote-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.2rem;
+}
+
+.quote-song {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.quote-author {
+  color: var(--accent);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}

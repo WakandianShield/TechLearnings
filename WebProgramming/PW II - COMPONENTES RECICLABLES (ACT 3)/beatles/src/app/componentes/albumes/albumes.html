@@ -1,0 +1,14 @@
+<section id="gallery" class="gallery">
+  <div class="gallery-header">
+    <h2 class="gallery-title">Discografia</h2>
+  </div>
+  <div class="gallery-grid">
+    @for (archivo of archivos; track archivo.titulo) {
+      <app-imagen-card
+        [imagen]="archivo.imagen"
+        [titulo]="archivo.titulo"
+        [subtitulo]="archivo.subtitulo"
+      />
+    }
+  </div>
+</section>
