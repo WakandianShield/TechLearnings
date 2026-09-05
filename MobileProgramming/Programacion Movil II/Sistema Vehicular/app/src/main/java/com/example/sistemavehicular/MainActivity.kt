@@ -13,13 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Datos de ejemplo para que la app no inicie vacía
         if (sistema.vehiculos.isEmpty()) {
             sistema.registrarVehiculo(Vehiculo("ABC-123", "Toyota", "Corolla", 2022, 50.0, true))
             sistema.registrarVehiculo(Vehiculo("XYZ-789", "Ford", "Mustang", 2021, 120.0, false))
             sistema.registrarCliente(Cliente("1", "Juan Pérez", "555-0199"))
             
-            // Simular una renta para el vehículo rentado
             val cliente = sistema.clientes[0]
             val vehiculo = sistema.vehiculos[1]
             sistema.realizarRenta(cliente, vehiculo, 3)

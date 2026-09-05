@@ -21,7 +21,6 @@ data class Cliente(
     val telefono: String
 ) {
     fun solicitarRenta(vehiculo: Vehiculo, dias: Int) {
-        // Esta lógica suele ir en el controlador/sistema
     }
 
     override fun toString(): String = "$nombre ($identificacion)"
